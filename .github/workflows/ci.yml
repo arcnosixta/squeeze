@@ -1,0 +1,63 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 22.18 is the floor: type stripping is unflagged from there.
+        node: ["22.18", "24", "current"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: no install needed
+        run: |
+          if [ -f package-lock.json ]; then npm ci; fi
+
+      - name: doctor
+        run: node src/cli/main.ts doctor
+
+      - name: unit tests
+        run: node --test test/*.test.ts
+
+      - name: selftest
+        run: node src/cli/main.ts selftest
+
+      - name: proxy integration
+        run: ./scripts/test-proxy.sh
+
+      - name: mcp integration
+        run: ./scripts/test-mcp.sh
+
+      - name: ref durability
+        run: ./scripts/test-persistence.sh
+
+  bench:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      # Guards the README table against silent regression. If compression gets
+      # weaker, this fails instead of the numbers quietly going stale.
+      - name: benchmark has not regressed
+        run: |
+          set -euo pipefail
+          out=$(node src/cli/main.ts bench aggressive)
+          echo "$out"
+          pct=$(echo "$out" | grep -o '([0-9.]*% reduction)' | tr -d '()% ' | cut -d. -f1)
+          echo "reduction: ${pct}%"
+          awk -v p="$pct" 'BEGIN { if (p < 45) { print "regression: " p "% < 45%"; exit 1 } }'

@@ -1,0 +1,57 @@
+{
+  "name": "squeeze",
+  "version": "0.1.0",
+  "description": "Lossless token compression for coding agents. Drop-in proxy + CLI that cuts prompt tokens ~50% on logs, compiler output and repeated tool results. Zero dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "bin": {
+    "squeeze": "src/cli/main.ts",
+    "squeeze-mcp": "src/mcp/server.ts"
+  },
+  "exports": {
+    ".": "./src/core/compress.ts",
+    "./proxy": "./src/proxy/server.ts",
+    "./mcp": "./src/mcp/server.ts",
+    "./store": "./src/core/stats.ts"
+  },
+  "files": [
+    "src",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "bench": "node src/cli/main.ts bench",
+    "selftest": "node src/cli/main.ts selftest",
+    "doctor": "node src/cli/main.ts doctor",
+    "serve": "node src/cli/main.ts serve",
+    "test": "node --test test/*.test.ts",
+    "test:proxy": "./scripts/test-proxy.sh",
+    "test:mcp": "./scripts/test-mcp.sh",
+    "test:persistence": "./scripts/test-persistence.sh",
+    "mcp": "node src/mcp/server.ts"
+  },
+  "keywords": [
+    "llm",
+    "tokens",
+    "context-window",
+    "coding-agent",
+    "claude-code",
+    "codex",
+    "proxy",
+    "compression",
+    "prompt-compression",
+    "cost-optimization"
+  ],
+  "topics": [
+    "llm",
+    "context-window",
+    "coding-agent",
+    "prompt-compression",
+    "llmops",
+    "token-optimization"
+  ]
+}

@@ -1,0 +1,9 @@
+node_modules/
+.squeeze/
+*.log
+*.tsbuildinfo
+.DS_Store
+.env
+.env.local
+dist/
+coverage/
