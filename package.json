@@ -1,29 +1,37 @@
 {
-  "name": "squeeze",
+  "name": "@arcnosixta/squeeze",
   "version": "0.1.0",
-  "description": "Lossless token compression for coding agents. Drop-in proxy + CLI that cuts prompt tokens ~50% on logs, compiler output and repeated tool results. Zero dependencies.",
+  "description": "Lossless token compression for coding agents. Drop-in proxy + CLI that cuts prompt tokens on logs, compiler output and repeated tool results (measured up to 70% on real tsc output, 45% on real failing test runs). Zero dependencies.",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcnosixta/squeeze.git"
+  },
   "engines": {
     "node": ">=22.18.0"
   },
   "bin": {
-    "squeeze": "src/cli/main.ts",
-    "squeeze-mcp": "src/mcp/server.ts"
+    "squeeze": "dist/cli/main.js",
+    "squeeze-mcp": "dist/mcp/server.js"
   },
   "exports": {
-    ".": "./src/core/compress.ts",
-    "./proxy": "./src/proxy/server.ts",
-    "./mcp": "./src/mcp/server.ts",
-    "./store": "./src/core/stats.ts"
+    ".": "./dist/core/compress.js",
+    "./proxy": "./dist/proxy/server.js",
+    "./mcp": "./dist/mcp/server.js",
+    "./store": "./dist/core/stats.js"
   },
   "files": [
+    "dist",
     "src",
     "scripts",
+    "fixtures/real",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
+    "build": "node_modules/.bin/tsc -p tsconfig.build.json",
+    "prepack": "npm run build",
     "bench": "node src/cli/main.ts bench",
     "selftest": "node src/cli/main.ts selftest",
     "doctor": "node src/cli/main.ts doctor",
@@ -53,5 +61,9 @@
     "prompt-compression",
     "llmops",
     "token-optimization"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Regenerate fixtures/real/ from actual tool runs.
 #
-# The synthetic fixtures in scripts/bench.ts are hand-written to look like tool
+# The synthetic fixtures in src/cli/bench.ts are hand-written to look like tool
 # output. These are the opposite: files captured from real runs of tsc, npm,
 # pytest, node --test, GitHub Actions and dpkg on the machine that built them.
 # Run this on the machine where you want fresh evidence; the checked-in copies

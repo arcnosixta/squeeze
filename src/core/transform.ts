@@ -45,7 +45,12 @@ function isTextBlock(b: unknown): b is Block & { text: string } {
 // Anthropic nests tool_result text at content[].content[].text, OpenAI keeps
 // tool output as a flat string, and both appear inside the same transcript
 // shape across turns, so this has to recurse rather than assume one level.
-function walk(node: unknown, level: Level, store: Store, acc: Stats): unknown {
+interface WalkNode {
+  value: unknown;
+  stats: Stats;
+}
+
+function walk(node: unknown, level: Level, store: Store, acc: Stats): WalkNode {
   if (Array.isArray(node)) {
     let total = acc;
     const out = node.map((n) => {

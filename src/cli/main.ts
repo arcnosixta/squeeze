@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { runBench, runRealBench } from "../../scripts/bench.ts";
+import { runBench, runRealBench } from "./bench.ts";
 import { createProxy } from "../proxy/server.ts";
 import { compress, expand } from "../core/compress.ts";
 import { Store, defaultStorePath } from "../core/stats.ts";

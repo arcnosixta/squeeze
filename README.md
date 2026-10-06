@@ -58,25 +58,26 @@ curl "http://127.0.0.1:8899/squeeze/expand?ref=83a63083475a87f0"
 
 ## Install
 
-Requires Node 22.18+. No build step, no dependencies — Node runs the TypeScript
-directly.
+Requires Node 22.18+. No runtime dependencies, no build step for you.
+
+**From npm:**
+
+```bash
+npm install -g @arcnosixta/squeeze
+squeeze doctor
+```
+
+The npm name `squeeze` belongs to someone else, so this package lives under its
+own scope. The tarball ships precompiled so the install works anywhere.
+
+**From the source** (same thing, no install needed — Node runs the TypeScript
+directly):
 
 ```bash
 git clone https://github.com/arcnosixta/squeeze
 cd squeeze
 node src/cli/main.ts doctor
 ```
-
-There is no npm package yet. Clone it and point your tooling at the files
-directly — `package.json` exposes `squeeze` and `squeeze-mcp` bins, so a local
-`npm link` also works:
-
-```bash
-npm link && squeeze doctor
-```
-
-> The npm name `squeeze` belongs to someone else. This project does not publish
-> there under that name, so do not `npm install squeeze` expecting this tool.
 
 ## Use
 
@@ -161,6 +162,18 @@ that makes losslessness real: without it, a ref is a promise nobody can keep.
 ```bash
 node src/cli/main.ts mcp
 ```
+
+```json
+{
+  "mcpServers": {
+    "squeeze": {
+      "command": "squeeze-mcp"
+    }
+  }
+}
+```
+
+If you cloned instead of installing, point at the source file instead:
 
 ```json
 {

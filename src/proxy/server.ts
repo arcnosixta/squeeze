@@ -1,4 +1,4 @@
-import { createServer } from "node:http";
+import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { Store, defaultStorePath } from "../core/stats.ts";
 import { transformRequest } from "../core/transform.ts";
 
@@ -104,7 +104,7 @@ async function pump(
 export function createProxy() {
   const cfg = readConfig();
 
-  const server = (async (req, res) => {
+  const server = (async (req: IncomingMessage, res: ServerResponse) => {
     const url = req.url ?? "/";
 
     if (url === "/squeeze/health") {

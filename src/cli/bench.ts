@@ -1,5 +1,5 @@
-import { Store, type Level, type Stats, ZERO, savedChars } from "../src/core/stats.ts";
-import { compress, stripAnsi } from "../src/core/compress.ts";
+import { Store, type Level, type Stats, ZERO, savedChars } from "../core/stats.ts";
+import { compress, stripAnsi } from "../core/compress.ts";
 import { readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -165,7 +165,7 @@ export function runBench(
 // maintained open-source code mostly type-checks clean.
 // ---------------------------------------------------------------------------
 
-const REAL_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "fixtures", "real");
+const REAL_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "fixtures", "real");
 
 const REAL_KIND: Record<string, string> = {
   "tsc-errors.txt": "compiler*",
