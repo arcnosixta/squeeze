@@ -50,11 +50,7 @@ function table(rows: { name: string; originalChars: number; compressedChars: num
 
 function cmdBench(args: string[]) {
   const mode = args[0] === "real" || args[0] === "all" ? args[0] : "synthetic";
-  const levelArg = mode === "synthetic" ? args[0] : args[1];
-  const level =
-    levelArg === "none" || levelArg === "safe" || levelArg === "aggressive"
-      ? levelArg
-      : "safe";
+  const level = resolveLevel(mode === "synthetic" ? args : args.slice(1));
 
   if (mode === "synthetic") {
     table(runBench(level));
@@ -93,15 +89,28 @@ function readInput(path: string): string {
 }
 
 const LEVEL_NAMES = new Set(["none", "safe", "aggressive"]);
+type Level = "none" | "safe" | "aggressive";
+const isLevel = (v: string | undefined): v is Level =>
+  v !== undefined && LEVEL_NAMES.has(v);
 
-function resolveLevel(args: string[]): "none" | "safe" | "aggressive" {
-  const flag = args.find((a) => a.startsWith("--") && a.slice(2) !== "");
-  if (flag) {
-    const name = flag.slice(2);
-    if (LEVEL_NAMES.has(name)) return name as "safe";
+function resolveLevel(args: string[]): Level {
+  for (let i = 0; i < args.length; i++) {
+    const a = args[i];
+    if (a.startsWith("--level=")) {
+      const v = a.slice("--level=".length);
+      if (isLevel(v)) return v;
+    } else if (a === "--level") {
+      const v = args[i + 1];
+      if (isLevel(v)) return v;
+    } else if (a.startsWith("--") && a !== "--") {
+      const name = a.slice(2);
+      if (isLevel(name)) return name;
+    } else if (isLevel(a)) {
+      return a;
+    }
   }
-  const env = process.env.SQUEEZE_LEVEL ?? "safe";
-  return LEVEL_NAMES.has(env) ? (env as "safe") : "safe";
+  const env = process.env.SQUEEZE_LEVEL;
+  return isLevel(env) ? env : "aggressive";
 }
 
 function cmdCompress(args: string[]) {
