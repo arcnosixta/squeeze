@@ -60,12 +60,16 @@ cd squeeze
 node src/cli/main.ts doctor
 ```
 
-Or as a package, which puts `squeeze` and `squeeze-mcp` on your PATH:
+There is no npm package yet. Clone it and point your tooling at the files
+directly — `package.json` exposes `squeeze` and `squeeze-mcp` bins, so a local
+`npm link` also works:
 
 ```bash
-npm install -g squeeze
-squeeze doctor
+npm link && squeeze doctor
 ```
+
+> The npm name `squeeze` belongs to someone else. This project does not publish
+> there under that name, so do not `npm install squeeze` expecting this tool.
 
 ## Use
 
