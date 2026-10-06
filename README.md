@@ -1,5 +1,10 @@
 # squeeze
 
+[![ci](https://github.com/arcnosixta/squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/arcnosixta/squeeze/actions/workflows/ci.yml)
+[![node](https://img.shields.io/badge/node-%E2%89%A5%2022.18-brightgreen)](https://nodejs.org)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![zero dependencies](https://img.shields.io/badge/dependencies-none-2ea44f.svg)](#install)
+
 **Cut 49.7% of your coding agent's prompt tokens. Losslessly.**
 
 A drop-in proxy that sits between your agent and the LLM API, compresses tool
