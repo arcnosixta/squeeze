@@ -5,8 +5,8 @@ import { transformRequest } from "../core/transform.ts";
 const LEVELS = new Set(["none", "safe", "aggressive"]);
 
 function readLevel(): "none" | "safe" | "aggressive" {
-  const v = process.env.SQUEEZE_LEVEL ?? "safe";
-  return LEVELS.has(v) ? (v as "safe") : "safe";
+  const v = process.env.SQUEEZE_LEVEL ?? "aggressive";
+  return LEVELS.has(v) ? (v as "none" | "safe" | "aggressive") : "aggressive";
 }
 
 interface ProxyConfig {

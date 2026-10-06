@@ -239,3 +239,33 @@ export function defaultStorePath(): string {
   if (env) return env;
   return join(process.cwd(), ".squeeze", "store.jsonl");
 }
+
+/**
+ * Does this payload need to be read line by line rather than summarised?
+ *
+ * Source code and JSON are load-bearing: every line means something different
+ * from its neighbours even when they share a shape, so replacing a run of them
+ * with handles makes the file unreadable until the model expands each one. Tool
+ * output is the opposite — the repetition *is* the noise.
+ *
+ * This is a document-level call on purpose. A line-by-line test cannot tell a
+ * traceback's `def test_x():` from real source, because both appear in
+ * documents squeeze should compress. So we ask how much of the document looks
+ * structural, and only then back off.
+ */
+export function looksStructured(text: string): boolean {
+  const lines = text.split("\n").filter((l) => l.trim() !== "");
+  if (lines.length === 0) return false;
+
+  const jsonLine = /^\s*(?:[\{\}\[\],]|\{|\}|\[|\]|"[^"]{0,120}"\s*:\s*.+|.+,\s*)$/;
+  const codeLine =
+    /^\s*(?:import\b|export\b|const\b|let\b|var\b|function\b|class\b|return\b|if\b|for\b|while\b|type\b|interface\b|def\b|async\b|await\b|from\b|package\b|#include\b)/;
+  const codePunct = /(?:;\s*$|\{\s*$|^\s*\}|^\s*\)\s*$|=>\s*.*\{\s*$)/;
+
+  let structural = 0;
+  for (const line of lines) {
+    const t = line.trim();
+    if (jsonLine.test(t) || codeLine.test(t) || codePunct.test(line)) structural++;
+  }
+  return structural / lines.length >= 0.45;
+}

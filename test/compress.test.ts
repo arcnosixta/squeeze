@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { compress, stripAnsi } from "../src/core/compress.ts";
-import { Store, classify, isLogNoise, savedChars } from "../src/core/stats.ts";
+import { compress, expand, stripAnsi } from "../src/core/compress.ts";
+import { Store, classify, isLogNoise, looksStructured, savedChars } from "../src/core/stats.ts";
 import { existsSync, mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -188,4 +188,70 @@ test("default Store writes nothing to disk", () => {
   s.put("side effect check");
   assert.equal(existsSync(join(process.cwd(), ".squeeze")), before,
     "a plain Store must not create .squeeze in the caller's cwd");
+});
+
+test("looksStructured protects JSON and source, not tool output", () => {
+  const json = '{\n  "field_0": {\n    "id": 0,\n    "tags": ["a", "b"]\n  },\n  "field_1": {\n    "id": 1\n  }\n}\n';
+  const source = 'export const a = 1;\nconst b = 2;\nfunction f() {\n  return b;\n}\n'.repeat(3);
+  const tool = Array.from(
+    { length: 30 },
+    (_, i) => `src/mod${i}.ts(${i},4): error TS2322: type mismatch`,
+  ).join("\n");
+
+  assert.ok(looksStructured(json), "JSON is read line by line");
+  assert.ok(looksStructured(source), "source is read line by line");
+  assert.ok(!looksStructured(tool), "compiler errors are the noise squeeze compresses");
+});
+
+test("global dedup catches non-adjacent repeats and preserves order", () => {
+  const store = new Store();
+  const input = [
+    "src/mod0.ts(0,0): error TS2322: type mismatch",
+    "CHECKPOINT alpha",
+    "src/mod1.ts(1,1): error TS2322: type mismatch",
+    "CHECKPOINT beta",
+    "src/mod2.ts(2,2): error TS2322: type mismatch",
+  ].join("\n");
+
+  const r = compress(input, { level: "aggressive", store });
+
+  // The two error lines after the first collapsed to handles, and the
+  // CHECKPOINT lines are untouched and still in order around the handles.
+  const alpha = r.text.indexOf("CHECKPOINT alpha");
+  const beta = r.text.indexOf("CHECKPOINT beta");
+  assert.ok(alpha >= 0 && beta > alpha, "content order preserved");
+  const refs = [...r.text.matchAll(/ref=([0-9a-f]+)/g)].map((m) => m[1]);
+  assert.ok(refs.length >= 2, "non-adjacent repeats got handles");
+  for (const ref of refs) {
+    assert.ok(input.includes(store.get(ref)!), "each handle stores a real contiguous slice");
+  }
+});
+
+test("expand rebuilds the document through its handles", () => {
+  const store = new Store();
+  const input = Array.from(
+    { length: 40 },
+    (_, i) => `worker-${i % 5} heartbeat seq=${i} ${i % 3 === 0 ? "OK" : "retry"}`,
+  ).join("\n");
+
+  const r = compress(input, { level: "aggressive", store });
+  const rest = expand(r.text, store);
+
+  // No blank runs and no ANSI here, so the round-trip must be byte-exact.
+  assert.equal(rest, input, "expand returns the exact original text");
+});
+
+test("expand is order-preserving even for reordered-looking handles", () => {
+  const store = new Store();
+  const input = [
+    "device 1: online",
+    "PILLAR one",
+    "device 2: online",
+    "PILLAR two",
+    "device 3: online",
+  ].join("\n");
+
+  const r = compress(input, { level: "aggressive", store });
+  const rest = expand(r.text, store);
+  assert.equal(rest, input, "sequence and bytes survive the round trip");
 });

@@ -1,0 +1,270 @@
+src/models/row0.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row0.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row0.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row0.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row0.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row0.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row1.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row1.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row1.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row1.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row10.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row10.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row10.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row10.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row11.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row11.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row11.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row12.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row12.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row12.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row12.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row12.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row13.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row13.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row13.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row13.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row14.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row14.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row14.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row14.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row14.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row14.ts(18,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row15.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row15.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row15.ts(14,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row15.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row15.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row16.ts(10,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row16.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row16.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row17.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row17.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row17.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row18.ts(13,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row18.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row18.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row18.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row18.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row18.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row19.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row19.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row19.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row19.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row19.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row19.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row2.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row2.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row2.ts(13,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row2.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row20.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row20.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row20.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row20.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row20.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row21.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row21.ts(11,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row21.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row22.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row22.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row22.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row22.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row22.ts(17,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row22.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row23.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row23.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row23.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row23.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row23.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row23.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row24.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row24.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row24.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row25.ts(13,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row25.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row25.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row25.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row25.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row25.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row26.ts(11,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row26.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row26.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row26.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row27.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row27.ts(12,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row27.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row27.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row28.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row28.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row28.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row28.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row29.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row29.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row29.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row29.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row29.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row29.ts(18,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row3.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row3.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row3.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row30.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row30.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row30.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row30.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row31.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row31.ts(14,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row31.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row31.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row31.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row31.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row32.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row32.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row32.ts(15,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row32.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row32.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row32.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row33.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row33.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row33.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row34.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row34.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row34.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row34.ts(14,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row35.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row35.ts(13,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row35.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row35.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row35.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row36.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row36.ts(14,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row36.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row36.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row36.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row36.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row37.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row37.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row37.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row37.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row37.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row38.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row38.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row38.ts(15,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row38.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row38.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row38.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row39.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row39.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row39.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row39.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row39.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row39.ts(18,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row4.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row4.ts(14,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row4.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row4.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row4.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row4.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row40.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row40.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row40.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row40.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row40.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row41.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row41.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row41.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row41.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row41.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row41.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row42.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row42.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row42.ts(12,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row43.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row43.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row43.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row43.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row43.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row43.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row44.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row44.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row44.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row44.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row44.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row44.ts(18,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row45.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row45.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row45.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row46.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row46.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row46.ts(12,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row47.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row47.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row47.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row48.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row48.ts(12,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row48.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row48.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row49.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row49.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row49.ts(15,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row49.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row49.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row49.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row5.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row5.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row5.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row50.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row50.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row50.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row50.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row50.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row50.ts(18,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row51.ts(11,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row51.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row51.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row51.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row52.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row52.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row52.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row53.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row53.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row53.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row53.ts(14,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row54.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row54.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row54.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row54.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row55.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row55.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row55.ts(15,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row55.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row55.ts(17,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row55.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row56.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row56.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row56.ts(12,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row57.ts(10,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row57.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row57.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row58.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row58.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row58.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row58.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row59.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row59.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row59.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row6.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row6.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row6.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row7.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row7.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row7.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row7.ts(14,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row8.ts(13,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row8.ts(14,5): error TS2322: Type 'unknown' is not assignable to type 'Date'.
+src/models/row8.ts(15,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row8.ts(16,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row8.ts(17,5): error TS2322: Type 'unknown' is not assignable to type '"closed" | "open"'.
+src/models/row8.ts(18,5): error TS2322: Type 'unknown' is not assignable to type 'number'.
+src/models/row9.ts(10,5): error TS2322: Type 'unknown' is not assignable to type 'boolean'.
+src/models/row9.ts(11,5): error TS2322: Type 'unknown' is not assignable to type 'string[]'.
+src/models/row9.ts(12,5): error TS2322: Type 'unknown' is not assignable to type 'number'.

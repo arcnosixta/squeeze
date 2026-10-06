@@ -1,0 +1,517 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-8.3.5, pluggy-1.5.0
+rootdir: TMP/pytest
+plugins: langsmith-0.14.0, anyio-4.15.1, typeguard-4.4.2
+collected 190 items
+
+test_suite.py ........F..............F.....FF..........FF.......F.F.F.F. [ 30%]
+..F....F.F..F..FF.F.FF.....F.........F.F.F........FF....F...........F... [ 68%]
+.......F.....F...FF...FF..F....FF...F.F......F..........F.FF             [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_discount_case_8 _____________________________
+
+    def test_discount_case_8():
+>       assert discount(30.29, 25) == pytest.approx(22.72, rel=1e-6)
+E       assert 22.7175 == 22.72 ± 2.3e-05
+E         
+E         comparison failed
+E         Obtained: 22.7175
+E         Expected: 22.72 ± 2.3e-05
+
+test_suite.py:30: AssertionError
+____________________________ test_discount_case_23 _____________________________
+
+    def test_discount_case_23():
+>       assert discount(30.07, 20) == pytest.approx(24.06, rel=1e-6)
+E       assert 24.056 == 24.06 ± 2.4e-05
+E         
+E         comparison failed
+E         Obtained: 24.056
+E         Expected: 24.06 ± 2.4e-05
+
+test_suite.py:75: AssertionError
+____________________________ test_discount_case_29 _____________________________
+
+    def test_discount_case_29():
+>       assert discount(399.41, 15) == pytest.approx(339.5, rel=1e-6)
+E       assert 339.49850000000004 == 339.5 ± 3.4e-04
+E         
+E         comparison failed
+E         Obtained: 339.49850000000004
+E         Expected: 339.5 ± 3.4e-04
+
+test_suite.py:93: AssertionError
+____________________________ test_discount_case_30 _____________________________
+
+    def test_discount_case_30():
+>       assert discount(47.71, 25) == pytest.approx(35.78, rel=1e-6)
+E       assert 35.7825 == 35.78 ± 3.6e-05
+E         
+E         comparison failed
+E         Obtained: 35.7825
+E         Expected: 35.78 ± 3.6e-05
+
+test_suite.py:96: AssertionError
+____________________________ test_discount_case_41 _____________________________
+
+    def test_discount_case_41():
+>       assert discount(395.05, 15) == pytest.approx(335.79, rel=1e-6)
+E       assert 335.7925 == 335.79 ± 3.4e-04
+E         
+E         comparison failed
+E         Obtained: 335.7925
+E         Expected: 335.79 ± 3.4e-04
+
+test_suite.py:129: AssertionError
+____________________________ test_discount_case_42 _____________________________
+
+    def test_discount_case_42():
+>       assert discount(248.24, 10) == pytest.approx(223.42, rel=1e-6)
+E       assert 223.41600000000003 == 223.42 ± 2.2e-04
+E         
+E         comparison failed
+E         Obtained: 223.41600000000003
+E         Expected: 223.42 ± 2.2e-04
+
+test_suite.py:132: AssertionError
+____________________________ test_discount_case_50 _____________________________
+
+    def test_discount_case_50():
+>       assert discount(109.33, 20) == pytest.approx(87.46, rel=1e-6)
+E       assert 87.464 == 87.46 ± 8.7e-05
+E         
+E         comparison failed
+E         Obtained: 87.464
+E         Expected: 87.46 ± 8.7e-05
+
+test_suite.py:156: AssertionError
+____________________________ test_discount_case_52 _____________________________
+
+    def test_discount_case_52():
+>       assert discount(56.91, 25) == pytest.approx(42.68, rel=1e-6)
+E       assert 42.6825 == 42.68 ± 4.3e-05
+E         
+E         comparison failed
+E         Obtained: 42.6825
+E         Expected: 42.68 ± 4.3e-05
+
+test_suite.py:162: AssertionError
+____________________________ test_discount_case_54 _____________________________
+
+    def test_discount_case_54():
+>       assert discount(272.84, 5) == pytest.approx(259.2, rel=1e-6)
+E       assert 259.198 == 259.2 ± 2.6e-04
+E         
+E         comparison failed
+E         Obtained: 259.198
+E         Expected: 259.2 ± 2.6e-04
+
+test_suite.py:168: AssertionError
+____________________________ test_discount_case_56 _____________________________
+
+    def test_discount_case_56():
+>       assert discount(93.66, 10) == pytest.approx(84.29, rel=1e-6)
+E       assert 84.294 == 84.29 ± 8.4e-05
+E         
+E         comparison failed
+E         Obtained: 84.294
+E         Expected: 84.29 ± 8.4e-05
+
+test_suite.py:174: AssertionError
+____________________________ test_discount_case_60 _____________________________
+
+    def test_discount_case_60():
+>       assert discount(335.3, 25) == pytest.approx(251.48, rel=1e-6)
+E       assert 251.47500000000002 == 251.48 ± 2.5e-04
+E         
+E         comparison failed
+E         Obtained: 251.47500000000002
+E         Expected: 251.48 ± 2.5e-04
+
+test_suite.py:186: AssertionError
+____________________________ test_discount_case_65 _____________________________
+
+    def test_discount_case_65():
+>       assert discount(166.76, 20) == pytest.approx(133.41, rel=1e-6)
+E       assert 133.408 == 133.41 ± 1.3e-04
+E         
+E         comparison failed
+E         Obtained: 133.408
+E         Expected: 133.41 ± 1.3e-04
+
+test_suite.py:201: AssertionError
+____________________________ test_discount_case_67 _____________________________
+
+    def test_discount_case_67():
+>       assert discount(176.57, 10) == pytest.approx(158.91, rel=1e-6)
+E       assert 158.913 == 158.91 ± 1.6e-04
+E         
+E         comparison failed
+E         Obtained: 158.913
+E         Expected: 158.91 ± 1.6e-04
+
+test_suite.py:207: AssertionError
+____________________________ test_discount_case_70 _____________________________
+
+    def test_discount_case_70():
+>       assert discount(343.9, 15) == pytest.approx(292.31, rel=1e-6)
+E       assert 292.315 == 292.31 ± 2.9e-04
+E         
+E         comparison failed
+E         Obtained: 292.315
+E         Expected: 292.31 ± 2.9e-04
+
+test_suite.py:216: AssertionError
+____________________________ test_discount_case_73 _____________________________
+
+    def test_discount_case_73():
+>       assert discount(360.37, 25) == pytest.approx(270.28, rel=1e-6)
+E       assert 270.27750000000003 == 270.28 ± 2.7e-04
+E         
+E         comparison failed
+E         Obtained: 270.27750000000003
+E         Expected: 270.28 ± 2.7e-04
+
+test_suite.py:225: AssertionError
+____________________________ test_discount_case_74 _____________________________
+
+    def test_discount_case_74():
+>       assert discount(195.01, 5) == pytest.approx(185.26, rel=1e-6)
+E       assert 185.25949999999997 == 185.26 ± 1.9e-04
+E         
+E         comparison failed
+E         Obtained: 185.25949999999997
+E         Expected: 185.26 ± 1.9e-04
+
+test_suite.py:228: AssertionError
+____________________________ test_discount_case_76 _____________________________
+
+    def test_discount_case_76():
+>       assert discount(168.43, 25) == pytest.approx(126.32, rel=1e-6)
+E       assert 126.3225 == 126.32 ± 1.3e-04
+E         
+E         comparison failed
+E         Obtained: 126.3225
+E         Expected: 126.32 ± 1.3e-04
+
+test_suite.py:234: AssertionError
+____________________________ test_discount_case_78 _____________________________
+
+    def test_discount_case_78():
+>       assert discount(314.02, 15) == pytest.approx(266.92, rel=1e-6)
+E       assert 266.917 == 266.92 ± 2.7e-04
+E         
+E         comparison failed
+E         Obtained: 266.917
+E         Expected: 266.92 ± 2.7e-04
+
+test_suite.py:240: AssertionError
+____________________________ test_discount_case_79 _____________________________
+
+    def test_discount_case_79():
+>       assert discount(53.28, 5) == pytest.approx(50.62, rel=1e-6)
+E       assert 50.616 == 50.62 ± 5.1e-05
+E         
+E         comparison failed
+E         Obtained: 50.616
+E         Expected: 50.62 ± 5.1e-05
+
+test_suite.py:243: AssertionError
+____________________________ test_discount_case_85 _____________________________
+
+    def test_discount_case_85():
+>       assert discount(311.22, 5) == pytest.approx(295.66, rel=1e-6)
+E       assert 295.659 == 295.66 ± 3.0e-04
+E         
+E         comparison failed
+E         Obtained: 295.659
+E         Expected: 295.66 ± 3.0e-04
+
+test_suite.py:261: AssertionError
+____________________________ test_discount_case_95 _____________________________
+
+    def test_discount_case_95():
+>       assert discount(22.16, 20) == pytest.approx(17.73, rel=1e-6)
+E       assert 17.728 == 17.73 ± 1.8e-05
+E         
+E         comparison failed
+E         Obtained: 17.728
+E         Expected: 17.73 ± 1.8e-05
+
+test_suite.py:291: AssertionError
+____________________________ test_discount_case_97 _____________________________
+
+    def test_discount_case_97():
+>       assert discount(279.18, 20) == pytest.approx(223.34, rel=1e-6)
+E       assert 223.34400000000002 == 223.34 ± 2.2e-04
+E         
+E         comparison failed
+E         Obtained: 223.34400000000002
+E         Expected: 223.34 ± 2.2e-04
+
+test_suite.py:297: AssertionError
+____________________________ test_discount_case_99 _____________________________
+
+    def test_discount_case_99():
+>       assert discount(33.27, 20) == pytest.approx(26.62, rel=1e-6)
+E       assert 26.616000000000003 == 26.62 ± 2.7e-05
+E         
+E         comparison failed
+E         Obtained: 26.616000000000003
+E         Expected: 26.62 ± 2.7e-05
+
+test_suite.py:303: AssertionError
+____________________________ test_discount_case_108 ____________________________
+
+    def test_discount_case_108():
+>       assert discount(265.39, 20) == pytest.approx(212.31, rel=1e-6)
+E       assert 212.312 == 212.31 ± 2.1e-04
+E         
+E         comparison failed
+E         Obtained: 212.312
+E         Expected: 212.31 ± 2.1e-04
+
+test_suite.py:330: AssertionError
+____________________________ test_discount_case_109 ____________________________
+
+    def test_discount_case_109():
+>       assert discount(14.28, 5) == pytest.approx(13.57, rel=1e-6)
+E       assert 13.565999999999999 == 13.57 ± 1.4e-05
+E         
+E         comparison failed
+E         Obtained: 13.565999999999999
+E         Expected: 13.57 ± 1.4e-05
+
+test_suite.py:333: AssertionError
+____________________________ test_discount_case_114 ____________________________
+
+    def test_discount_case_114():
+>       assert discount(44.47, 25) == pytest.approx(33.35, rel=1e-6)
+E       assert 33.3525 == 33.35 ± 3.3e-05
+E         
+E         comparison failed
+E         Obtained: 33.3525
+E         Expected: 33.35 ± 3.3e-05
+
+test_suite.py:348: AssertionError
+____________________________ test_discount_case_126 ____________________________
+
+    def test_discount_case_126():
+>       assert discount(236.65, 10) == pytest.approx(212.99, rel=1e-6)
+E       assert 212.985 == 212.99 ± 2.1e-04
+E         
+E         comparison failed
+E         Obtained: 212.985
+E         Expected: 212.99 ± 2.1e-04
+
+test_suite.py:384: AssertionError
+____________________________ test_discount_case_137 ____________________________
+
+    def test_discount_case_137():
+>       assert discount(329.54, 25) == pytest.approx(247.16, rel=1e-6)
+E       assert 247.15500000000003 == 247.16 ± 2.5e-04
+E         
+E         comparison failed
+E         Obtained: 247.15500000000003
+E         Expected: 247.16 ± 2.5e-04
+
+test_suite.py:417: AssertionError
+____________________________ test_discount_case_143 ____________________________
+
+    def test_discount_case_143():
+>       assert discount(311.44, 10) == pytest.approx(280.3, rel=1e-6)
+E       assert 280.296 == 280.3 ± 2.8e-04
+E         
+E         comparison failed
+E         Obtained: 280.296
+E         Expected: 280.3 ± 2.8e-04
+
+test_suite.py:435: AssertionError
+____________________________ test_discount_case_147 ____________________________
+
+    def test_discount_case_147():
+>       assert discount(109.35, 15) == pytest.approx(92.95, rel=1e-6)
+E       assert 92.94749999999999 == 92.95 ± 9.3e-05
+E         
+E         comparison failed
+E         Obtained: 92.94749999999999
+E         Expected: 92.95 ± 9.3e-05
+
+test_suite.py:447: AssertionError
+____________________________ test_discount_case_148 ____________________________
+
+    def test_discount_case_148():
+>       assert discount(183.68, 15) == pytest.approx(156.13, rel=1e-6)
+E       assert 156.12800000000001 == 156.13 ± 1.6e-04
+E         
+E         comparison failed
+E         Obtained: 156.12800000000001
+E         Expected: 156.13 ± 1.6e-04
+
+test_suite.py:450: AssertionError
+_____________________________ test_shipping_case_2 _____________________________
+
+    def test_shipping_case_2():
+>       assert shipping(1.0, express=False) == pytest.approx(7.077000000000001, rel=1e-6)
+E       assert 6.74 == 7.077000000000001 ± 7.1e-06
+E         
+E         comparison failed
+E         Obtained: 6.74
+E         Expected: 7.077000000000001 ± 7.1e-06
+
+test_suite.py:462: AssertionError
+_____________________________ test_shipping_case_3 _____________________________
+
+    def test_shipping_case_3():
+>       assert shipping(10.7, express=False) == pytest.approx(24.90075, rel=1e-6)
+E       assert 23.714999999999996 == 24.90075 ± 2.5e-05
+E         
+E         comparison failed
+E         Obtained: 23.714999999999996
+E         Expected: 24.90075 ± 2.5e-05
+
+test_suite.py:465: AssertionError
+_____________________________ test_shipping_case_6 _____________________________
+
+    def test_shipping_case_6():
+>       assert shipping(8.1, express=False) == pytest.approx(20.12325, rel=1e-6)
+E       assert 19.165 == 20.12325 ± 2.0e-05
+E         
+E         comparison failed
+E         Obtained: 19.165
+E         Expected: 20.12325 ± 2.0e-05
+
+test_suite.py:474: AssertionError
+____________________________ test_shipping_case_11 _____________________________
+
+    def test_shipping_case_11():
+>       assert shipping(8.8, express=True) == pytest.approx(42.819, rel=1e-6)
+E       assert 40.78 == 42.819 ± 4.3e-05
+E         
+E         comparison failed
+E         Obtained: 40.78
+E         Expected: 42.819 ± 4.3e-05
+
+test_suite.py:489: AssertionError
+____________________________ test_shipping_case_12 _____________________________
+
+    def test_shipping_case_12():
+>       assert shipping(10.7, express=False) == pytest.approx(24.90075, rel=1e-6)
+E       assert 23.714999999999996 == 24.90075 ± 2.5e-05
+E         
+E         comparison failed
+E         Obtained: 23.714999999999996
+E         Expected: 24.90075 ± 2.5e-05
+
+test_suite.py:492: AssertionError
+____________________________ test_shipping_case_16 _____________________________
+
+    def test_shipping_case_16():
+>       assert shipping(9.4, express=True) == pytest.approx(45.023999999999994, rel=1e-6)
+E       assert 42.879999999999995 == 45.023999999999994 ± 4.5e-05
+E         
+E         comparison failed
+E         Obtained: 42.879999999999995
+E         Expected: 45.023999999999994 ± 4.5e-05
+
+test_suite.py:504: AssertionError
+____________________________ test_shipping_case_18 _____________________________
+
+    def test_shipping_case_18():
+>       assert shipping(3.3, express=False) == pytest.approx(11.30325, rel=1e-6)
+E       assert 10.765 == 11.30325 ± 1.1e-05
+E         
+E         comparison failed
+E         Obtained: 10.765
+E         Expected: 11.30325 ± 1.1e-05
+
+test_suite.py:510: AssertionError
+____________________________ test_shipping_case_25 _____________________________
+
+    def test_shipping_case_25():
+>       assert shipping(10.9, express=True) == pytest.approx(50.5365, rel=1e-6)
+E       assert 48.129999999999995 == 50.5365 ± 5.1e-05
+E         
+E         comparison failed
+E         Obtained: 48.129999999999995
+E         Expected: 50.5365 ± 5.1e-05
+
+test_suite.py:531: AssertionError
+____________________________ test_shipping_case_36 _____________________________
+
+    def test_shipping_case_36():
+>       assert shipping(8.7, express=True) == pytest.approx(42.451499999999996, rel=1e-6)
+E       assert 40.42999999999999 == 42.451499999999996 ± 4.2e-05
+E         
+E         comparison failed
+E         Obtained: 40.42999999999999
+E         Expected: 42.451499999999996 ± 4.2e-05
+
+test_suite.py:564: AssertionError
+____________________________ test_shipping_case_38 _____________________________
+
+    def test_shipping_case_38():
+>       assert shipping(6.3, express=False) == pytest.approx(16.81575, rel=1e-6)
+E       assert 16.015 == 16.81575 ± 1.7e-05
+E         
+E         comparison failed
+E         Obtained: 16.015
+E         Expected: 16.81575 ± 1.7e-05
+
+test_suite.py:570: AssertionError
+____________________________ test_shipping_case_39 _____________________________
+
+    def test_shipping_case_39():
+>       assert shipping(9.4, express=True) == pytest.approx(45.023999999999994, rel=1e-6)
+E       assert 42.879999999999995 == 45.023999999999994 ± 4.5e-05
+E         
+E         comparison failed
+E         Obtained: 42.879999999999995
+E         Expected: 45.023999999999994 ± 4.5e-05
+
+test_suite.py:573: AssertionError
+=========================== short test summary info ============================
+FAILED test_suite.py::test_discount_case_8 - assert 22.7175 == 22.72 ± 2.3e-05
+FAILED test_suite.py::test_discount_case_23 - assert 24.056 == 24.06 ± 2.4e-05
+FAILED test_suite.py::test_discount_case_29 - assert 339.49850000000004 == 33...
+FAILED test_suite.py::test_discount_case_30 - assert 35.7825 == 35.78 ± 3.6e-05
+FAILED test_suite.py::test_discount_case_41 - assert 335.7925 == 335.79 ± 3.4...
+FAILED test_suite.py::test_discount_case_42 - assert 223.41600000000003 == 22...
+FAILED test_suite.py::test_discount_case_50 - assert 87.464 == 87.46 ± 8.7e-05
+FAILED test_suite.py::test_discount_case_52 - assert 42.6825 == 42.68 ± 4.3e-05
+FAILED test_suite.py::test_discount_case_54 - assert 259.198 == 259.2 ± 2.6e-04
+FAILED test_suite.py::test_discount_case_56 - assert 84.294 == 84.29 ± 8.4e-05
+FAILED test_suite.py::test_discount_case_60 - assert 251.47500000000002 == 25...
+FAILED test_suite.py::test_discount_case_65 - assert 133.408 == 133.41 ± 1.3e-04
+FAILED test_suite.py::test_discount_case_67 - assert 158.913 == 158.91 ± 1.6e-04
+FAILED test_suite.py::test_discount_case_70 - assert 292.315 == 292.31 ± 2.9e-04
+FAILED test_suite.py::test_discount_case_73 - assert 270.27750000000003 == 27...
+FAILED test_suite.py::test_discount_case_74 - assert 185.25949999999997 == 18...
+FAILED test_suite.py::test_discount_case_76 - assert 126.3225 == 126.32 ± 1.3...
+FAILED test_suite.py::test_discount_case_78 - assert 266.917 == 266.92 ± 2.7e-04
+FAILED test_suite.py::test_discount_case_79 - assert 50.616 == 50.62 ± 5.1e-05
+FAILED test_suite.py::test_discount_case_85 - assert 295.659 == 295.66 ± 3.0e-04
+FAILED test_suite.py::test_discount_case_95 - assert 17.728 == 17.73 ± 1.8e-05
+FAILED test_suite.py::test_discount_case_97 - assert 223.34400000000002 == 22...
+FAILED test_suite.py::test_discount_case_99 - assert 26.616000000000003 == 26...
+FAILED test_suite.py::test_discount_case_108 - assert 212.312 == 212.31 ± 2.1...
+FAILED test_suite.py::test_discount_case_109 - assert 13.565999999999999 == 1...
+FAILED test_suite.py::test_discount_case_114 - assert 33.3525 == 33.35 ± 3.3e-05
+FAILED test_suite.py::test_discount_case_126 - assert 212.985 == 212.99 ± 2.1...
+FAILED test_suite.py::test_discount_case_137 - assert 247.15500000000003 == 2...
+FAILED test_suite.py::test_discount_case_143 - assert 280.296 == 280.3 ± 2.8e-04
+FAILED test_suite.py::test_discount_case_147 - assert 92.94749999999999 == 92...
+FAILED test_suite.py::test_discount_case_148 - assert 156.12800000000001 == 1...
+FAILED test_suite.py::test_shipping_case_2 - assert 6.74 == 7.077000000000001...
+FAILED test_suite.py::test_shipping_case_3 - assert 23.714999999999996 == 24....
+FAILED test_suite.py::test_shipping_case_6 - assert 19.165 == 20.12325 ± 2.0e-05
+FAILED test_suite.py::test_shipping_case_11 - assert 40.78 == 42.819 ± 4.3e-05
+FAILED test_suite.py::test_shipping_case_12 - assert 23.714999999999996 == 24...
+FAILED test_suite.py::test_shipping_case_16 - assert 42.879999999999995 == 45...
+FAILED test_suite.py::test_shipping_case_18 - assert 10.765 == 11.30325 ± 1.1...
+FAILED test_suite.py::test_shipping_case_25 - assert 48.129999999999995 == 50...
+FAILED test_suite.py::test_shipping_case_36 - assert 40.42999999999999 == 42....
+FAILED test_suite.py::test_shipping_case_38 - assert 16.015 == 16.81575 ± 1.7...
+FAILED test_suite.py::test_shipping_case_39 - assert 42.879999999999995 == 45...
+======================== 42 failed, 148 passed in 0.73s ========================

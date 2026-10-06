@@ -19,8 +19,8 @@ const PROTOCOL = "2025-06-18";
 const LEVELS: Level[] = ["none", "safe", "aggressive"];
 
 function level(): Level {
-  const v = process.env.SQUEEZE_LEVEL ?? "safe";
-  return (LEVELS as string[]).includes(v) ? (v as Level) : "safe";
+  const v = process.env.SQUEEZE_LEVEL ?? "aggressive";
+  return (LEVELS as string[]).includes(v) ? (v as Level) : "aggressive";
 }
 
 const store = new Store({ path: defaultStorePath() });

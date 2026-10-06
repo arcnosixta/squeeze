@@ -6,6 +6,7 @@ import {
   addStats,
   classify,
   hasAnsi,
+  looksStructured,
 } from "./stats.ts";
 
 export interface CompressResult {
@@ -138,6 +139,53 @@ function clusterSimilar(
 }
 
 
+// Replace a line with a handle whenever an earlier line shared its shape.
+//
+// The ordering here is the whole point. Real tool output almost never repeats
+// *adjacent* lines — an error list names a different file and line number on
+// every row, a test run reports a different case, a registry fetch names a
+// different package. Clustering only runs of neighbours therefore leaves the
+// repetition on the table. This pass keys on the whole document instead, but
+// every line keeps its own slot: the original is swapped for a handle in
+// place, never hoisted or dropped. Sequence is intact, and because the handle
+// stores that specific line's bytes, expansion is byte-exact.
+function dedupeRepeats(
+  lines: string[],
+  store: Store,
+): { lines: string[]; n: number } {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  let n = 0;
+
+  for (const line of lines) {
+    if (line.trim() === "") {
+      out.push(line);
+      continue;
+    }
+    const key = templateKey(line);
+    if (key === "") {
+      out.push(line);
+      continue;
+    }
+    if (seen.has(key)) {
+      const ref = store.put(line);
+      const marker = `⟨ref=${ref}⟩`;
+      // Never let a handle cost more than the line it replaces.
+      if (marker.length < line.length) {
+        out.push(marker);
+        n++;
+        continue;
+      }
+      out.push(line);
+      continue;
+    }
+    seen.add(key);
+    out.push(line);
+  }
+  return { lines: out, n };
+}
+
+
 export interface CompressOptions {
   level: Level;
   store: Store;
@@ -185,6 +233,16 @@ export function compress(input: string, opts: CompressOptions): CompressResult {
     lines = d.lines;
     dedupLines += d.n;
 
+    // The document-wide pass runs last so the neighbour clustering above keeps
+    // its richer `×N more` summary for runs that really are contiguous. It is
+    // skipped for JSON and source code, where every line means something the
+    // model has to read: handles there would cost more than they save.
+    if (!looksStructured(s)) {
+      const g = dedupeRepeats(lines, store);
+      lines = g.lines;
+      dedupLines += g.n;
+    }
+
     // Only report log folding when clustering actually consumed log lines.
     logLinesClustered =
       dedupLines > 0 && logLinesBefore > 0
@@ -209,4 +267,32 @@ export function compress(input: string, opts: CompressOptions): CompressResult {
       dedupLines,
     }),
   };
+}
+
+const HANDLE_RE = /⟨[^⟩]*ref=([0-9a-f]+)[^⟩]*⟩/;
+
+/**
+ * Restore a compressed document by resolving every handle against the store.
+ *
+ * Every marker squeeze emits — `⟨ref=…⟩`, `⟨×N more, ref=…⟩` and
+ * `⟨repeat of lines …; ref=…⟩` — references the exact bytes it replaced, so
+ * each one can be swapped back in place and the sequence is untouched. Lines
+ * whose sequence is unknown are left as-is rather than erroring: a ref that
+ * fell off the store end cannot be fabricated, and a silent gap would be worse
+ * than a visible one.
+ *
+ * Blank-run collapsing and ANSI stripping are not reversible and carry no ref,
+ * so those differences survive round-tripping — same as `safe`, whose whole
+ * point is that it trades those bytes for brevity.
+ */
+export function expand(input: string, store: Store): string {
+  return input
+    .split("\n")
+    .map((line) => {
+      const m = line.match(HANDLE_RE);
+      if (!m) return line;
+      const held = store.get(m[1]);
+      return held ?? line;
+    })
+    .join("\n");
 }

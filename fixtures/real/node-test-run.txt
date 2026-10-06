@@ -1,0 +1,33 @@
+✔ ansi stripping removes colour codes and shrinks text (1.724092ms)
+✔ classify separates blanks, log noise and content (1.033807ms)
+✔ isLogNoise needs timestamp or severity, not a bare number (0.423263ms)
+✔ safe level never loses content-bearing lines (0.935643ms)
+✔ aggressive collapses identical-template lines reversibly (4.470996ms)
+✔ aggressive never grows the payload (1.24327ms)
+✔ every stored ref round-trips byte-exact (0.759357ms)
+✔ clustered output restores the full original through its ref (0.750579ms)
+✔ aggressive preserves document order when interleaving logs and content (0.740874ms)
+✔ content lines keep their relative order after aggressive (0.726381ms)
+✔ refs survive a store restart when persisted to disk (1.935317ms)
+✔ identical text yields the same ref across independent stores (0.248956ms)
+✔ store evicts oldest entries past its cap (0.214545ms)
+✔ default Store writes nothing to disk (0.181219ms)
+✔ looksStructured protects JSON and source, not tool output (0.292539ms)
+✔ global dedup catches non-adjacent repeats and preserves order (0.498568ms)
+✔ expand rebuilds the document through its handles (1.146813ms)
+✔ expand is order-preserving even for reordered-looking handles (0.480889ms)
+✔ anthropic tool_result blocks get compressed in place (5.019329ms)
+✔ openai tool-role string content is compressed (2.067587ms)
+✔ original request object is not mutated (1.097562ms)
+✔ non-object payloads pass through safely (0.420075ms)
+✔ extended thinking blocks are never rewritten (0.740671ms)
+✔ compresses multi-turn transcripts across both formats at once (2.694502ms)
+✔ none level leaves payload byte-identical (0.50209ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 200.344598

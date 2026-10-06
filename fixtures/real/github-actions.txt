@@ -1,0 +1,997 @@
+bench	UNKNOWN STEP	﻿2026-10-06T09:00:32.6809674Z Current runner version: '2.337.0'
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6836679Z ##[group]Runner Image Provisioner
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6837562Z Hosted Compute Agent
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6838157Z Version: 20260901.588
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6838854Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6839619Z Build Date: 2026-09-01T19:56:44Z
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6840295Z Worker ID: {dfebe172-caaa-45cd-88f5-f0317f5949a0}
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6841107Z Azure Region: eastus2
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6841688Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6843272Z ##[group]Operating System
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6844198Z Ubuntu
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6844713Z 24.04.5
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6845297Z LTS
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6845806Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6846420Z ##[group]Runner Image
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6847070Z Image: ubuntu-24.04
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6847638Z Version: 20260927.320.1
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6848946Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6850549Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6851572Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6852800Z ##[group]GITHUB_TOKEN Permissions
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6855671Z Contents: read
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6856753Z Metadata: read
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6857499Z Packages: read
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6858054Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6860264Z Secret source: Actions
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6861246Z Cache mode: write
+bench	UNKNOWN STEP	2026-10-06T09:00:32.6862381Z Prepare workflow directory
+bench	UNKNOWN STEP	2026-10-06T09:00:32.7204593Z Prepare all required actions
+bench	UNKNOWN STEP	2026-10-06T09:00:32.7253315Z Getting action download info
+bench	UNKNOWN STEP	2026-10-06T09:00:32.9739869Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+bench	UNKNOWN STEP	2026-10-06T09:00:33.0664277Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+bench	UNKNOWN STEP	2026-10-06T09:00:33.2610994Z Complete job name: bench
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3388877Z ##[group]Run actions/checkout@v4
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3389925Z with:
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3390510Z   repository: arcnosixta/squeeze
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3394650Z   token: ***
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3395224Z   ssh-strict: true
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3395792Z   ssh-user: git
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3396365Z   persist-credentials: true
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3396976Z   clean: true
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3397557Z   sparse-checkout-cone-mode: true
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3398208Z   fetch-depth: 1
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3398763Z   fetch-tags: false
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3399329Z   show-progress: true
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3399904Z   lfs: false
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3400450Z   submodules: false
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3401038Z   set-safe-directory: true
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3401680Z   allow-unsafe-pr-checkout: false
+bench	UNKNOWN STEP	2026-10-06T09:00:33.3402573Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4424114Z Syncing repository: arcnosixta/squeeze
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4427285Z ##[group]Getting Git version info
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4428536Z Working directory is '/home/runner/work/squeeze/squeeze'
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4430184Z [command]/usr/bin/git version
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4531125Z git version 2.55.0
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4554601Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4571741Z Temporarily overriding HOME='/home/runner/work/_temp/0ea19817-cb0e-4ba5-b372-3b9691927191' before making global git config changes
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4574274Z Adding repository directory to the temporary git global config as a safe directory
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4578931Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/squeeze/squeeze
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4636044Z Deleting the contents of '/home/runner/work/squeeze/squeeze'
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4640917Z ##[group]Initializing the repository
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4645208Z [command]/usr/bin/git init /home/runner/work/squeeze/squeeze
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4766065Z hint: Using 'master' as the name for the initial branch. This default branch name
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4767334Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4768611Z hint: to use in all of your new repositories, which will suppress this warning,
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4769357Z hint: call:
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4769764Z hint:
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4770302Z hint: 	git config --global init.defaultBranch <name>
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4770931Z hint:
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4771601Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4772592Z hint: 'development'. The just-created branch can be renamed via this command:
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4773341Z hint:
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4774092Z hint: 	git branch -m <name>
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4774615Z hint:
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4775245Z hint: Disable this message with "git config set advice.defaultBranchName false"
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4781052Z Initialized empty Git repository in /home/runner/work/squeeze/squeeze/.git/
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4796917Z [command]/usr/bin/git remote add origin https://github.com/arcnosixta/squeeze
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4880787Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4882208Z ##[group]Disabling automatic garbage collection
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4885491Z [command]/usr/bin/git config --local gc.auto 0
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4921946Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4923262Z ##[group]Setting up auth
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4933133Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+bench	UNKNOWN STEP	2026-10-06T09:00:33.4974946Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+bench	UNKNOWN STEP	2026-10-06T09:00:33.5366718Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+bench	UNKNOWN STEP	2026-10-06T09:00:33.5406930Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+bench	UNKNOWN STEP	2026-10-06T09:00:33.5639566Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+bench	UNKNOWN STEP	2026-10-06T09:00:33.5677302Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+bench	UNKNOWN STEP	2026-10-06T09:00:33.5908281Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+bench	UNKNOWN STEP	2026-10-06T09:00:33.5986439Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:33.5988473Z ##[group]Fetching the repository
+bench	UNKNOWN STEP	2026-10-06T09:00:33.5998564Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4cd825dfd79c201c99c9e264c0a519eb76b40bc2:refs/remotes/origin/main
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8215526Z From https://github.com/arcnosixta/squeeze
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8216563Z  * [new ref]         4cd825dfd79c201c99c9e264c0a519eb76b40bc2 -> origin/main
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8220977Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8222387Z ##[group]Determining the checkout info
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8224304Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8229948Z [command]/usr/bin/git sparse-checkout disable
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8285141Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8389380Z ##[group]Checking out the ref
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8395941Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8480903Z Switched to a new branch 'main'
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8487813Z branch 'main' set up to track 'origin/main'.
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8494469Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8538868Z [command]/usr/bin/git log -1 --format=%H
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8567964Z 4cd825dfd79c201c99c9e264c0a519eb76b40bc2
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8874218Z ##[group]Run actions/setup-node@v4
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8874918Z with:
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8875374Z   node-version: 24
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8875851Z   always-auth: false
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8876339Z   check-latest: false
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8880229Z   token: ***
+bench	UNKNOWN STEP	2026-10-06T09:00:33.8880685Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:34.0331992Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+bench	UNKNOWN STEP	2026-10-06T09:00:34.0336346Z (node:2287) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+bench	UNKNOWN STEP	2026-10-06T09:00:34.0339506Z (Use `node --trace-deprecation ...` to show where the warning was created)
+bench	UNKNOWN STEP	2026-10-06T09:00:34.0341899Z ##[group]Environment details
+bench	UNKNOWN STEP	2026-10-06T09:00:34.4803461Z node: v24.21.0
+bench	UNKNOWN STEP	2026-10-06T09:00:34.4805944Z npm: 11.19.0
+bench	UNKNOWN STEP	2026-10-06T09:00:34.4807098Z yarn: 1.22.22
+bench	UNKNOWN STEP	2026-10-06T09:00:34.4809480Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:34.5002554Z ##[group]Run set -euo pipefail
+bench	UNKNOWN STEP	2026-10-06T09:00:34.5004514Z ^[[36;1mset -euo pipefail^[[0m
+bench	UNKNOWN STEP	2026-10-06T09:00:34.5005942Z ^[[36;1mout=$(node src/cli/main.ts bench aggressive)^[[0m
+bench	UNKNOWN STEP	2026-10-06T09:00:34.5007432Z ^[[36;1mecho "$out"^[[0m
+bench	UNKNOWN STEP	2026-10-06T09:00:34.5009019Z ^[[36;1mpct=$(echo "$out" | grep -o '([0-9.]*% reduction)' | tr -d '()% ' | cut -d. -f1)^[[0m
+bench	UNKNOWN STEP	2026-10-06T09:00:34.5011025Z ^[[36;1mecho "reduction: ${pct}%"^[[0m
+bench	UNKNOWN STEP	2026-10-06T09:00:34.5012824Z ^[[36;1mawk -v p="$pct" 'BEGIN { if (p < 45) { print "regression: " p "% < 45%"; exit 1 } }'^[[0m
+bench	UNKNOWN STEP	2026-10-06T09:00:34.5398812Z shell: /usr/bin/bash -e {0}
+bench	UNKNOWN STEP	2026-10-06T09:00:34.5400066Z ##[endgroup]
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7236981Z npm-install-verbose      18156 ->   16426    9.5%
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7239945Z tsc-errors               11387 ->     125   98.9%
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7242589Z json-dump                13609 ->   13609    0.0%
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7245608Z test-run                 15275 ->      67   99.6%
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7248943Z heartbeat-logs            4759 ->      85   98.2%
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7251153Z source-file               4820 ->    4818    0.0%
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7253158Z blank-heavy               1299 ->    1181    9.1%
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7257713Z dup-blocks                2939 ->      55   98.1%
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7266033Z 
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7267079Z total 72244 -> 36366 chars (49.7% reduction)
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7269336Z reduction: 49%
+bench	UNKNOWN STEP	2026-10-06T09:00:34.7492450Z Post job cleanup.
+bench	UNKNOWN STEP	2026-10-06T09:00:34.8760441Z (node:2333) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+bench	UNKNOWN STEP	2026-10-06T09:00:34.8764789Z (Use `node --trace-deprecation ...` to show where the warning was created)
+bench	UNKNOWN STEP	2026-10-06T09:00:34.9159209Z Post job cleanup.
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0056977Z [command]/usr/bin/git version
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0102720Z git version 2.55.0
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0148909Z Temporarily overriding HOME='/home/runner/work/_temp/cba2754b-5deb-423d-90f4-b7f71ffc83d7' before making global git config changes
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0152939Z Adding repository directory to the temporary git global config as a safe directory
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0157514Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/squeeze/squeeze
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0198169Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0236627Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0490722Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0520632Z http.https://github.com/.extraheader
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0531774Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0573095Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0839053Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+bench	UNKNOWN STEP	2026-10-06T09:00:35.0891486Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+bench	UNKNOWN STEP	2026-10-06T09:00:35.1317442Z Cleaning up orphan processes
+bench	UNKNOWN STEP	2026-10-06T09:00:35.1757847Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+test (24)	UNKNOWN STEP	﻿2026-10-06T09:00:32.9384523Z Current runner version: '2.337.0'
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9420788Z ##[group]Runner Image Provisioner
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9422470Z Hosted Compute Agent
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9423735Z Version: 20260901.588
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9424926Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9426437Z Build Date: 2026-09-01T19:56:44Z
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9427770Z Worker ID: {ddf3f7de-7f26-4665-963f-6629a114f600}
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9428962Z Azure Region: centralus
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9429647Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9431160Z ##[group]Operating System
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9432185Z Ubuntu
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9432906Z 24.04.5
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9433513Z LTS
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9434135Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9434789Z ##[group]Runner Image
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9435485Z Image: ubuntu-24.04
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9436214Z Version: 20260927.320.1
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9437628Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9439739Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9440712Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9442329Z ##[group]GITHUB_TOKEN Permissions
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9444540Z Contents: read
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9445245Z Metadata: read
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9445803Z Packages: read
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9446384Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9448934Z Secret source: Actions
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9449960Z Cache mode: write
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9450880Z Prepare workflow directory
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9858893Z Prepare all required actions
+test (24)	UNKNOWN STEP	2026-10-06T09:00:32.9930920Z Getting action download info
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.2549778Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.3631093Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.8506029Z Complete job name: test (24)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9351409Z ##[group]Run actions/checkout@v4
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9352581Z with:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9353035Z   repository: arcnosixta/squeeze
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9356777Z   token: ***
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9357221Z   ssh-strict: true
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9357666Z   ssh-user: git
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9358123Z   persist-credentials: true
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9358622Z   clean: true
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9359076Z   sparse-checkout-cone-mode: true
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9359601Z   fetch-depth: 1
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9360052Z   fetch-tags: false
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9360500Z   show-progress: true
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9360943Z   lfs: false
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9361354Z   submodules: false
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9362044Z   set-safe-directory: true
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9362558Z   allow-unsafe-pr-checkout: false
+test (24)	UNKNOWN STEP	2026-10-06T09:00:33.9363355Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0478111Z Syncing repository: arcnosixta/squeeze
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0480599Z ##[group]Getting Git version info
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0482051Z Working directory is '/home/runner/work/squeeze/squeeze'
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0483665Z [command]/usr/bin/git version
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0532788Z git version 2.55.0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0563836Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0570648Z Temporarily overriding HOME='/home/runner/work/_temp/7b20d6d6-816d-44f0-b05d-9be06a5b95e7' before making global git config changes
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0573285Z Adding repository directory to the temporary git global config as a safe directory
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0576714Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/squeeze/squeeze
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0643193Z Deleting the contents of '/home/runner/work/squeeze/squeeze'
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0652594Z ##[group]Initializing the repository
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0653716Z [command]/usr/bin/git init /home/runner/work/squeeze/squeeze
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0809110Z hint: Using 'master' as the name for the initial branch. This default branch name
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0810917Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0812753Z hint: to use in all of your new repositories, which will suppress this warning,
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0813679Z hint: call:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0814501Z hint:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0815101Z hint: 	git config --global init.defaultBranch <name>
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0815815Z hint:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0816475Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0817560Z hint: 'development'. The just-created branch can be renamed via this command:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0818426Z hint:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0818903Z hint: 	git branch -m <name>
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0819454Z hint:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0820169Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0826545Z Initialized empty Git repository in /home/runner/work/squeeze/squeeze/.git/
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0838163Z [command]/usr/bin/git remote add origin https://github.com/arcnosixta/squeeze
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0894090Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0894922Z ##[group]Disabling automatic garbage collection
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0899087Z [command]/usr/bin/git config --local gc.auto 0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0932967Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0933836Z ##[group]Setting up auth
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0941123Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.0974297Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.1442545Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.1470462Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.1722532Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.1758823Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.1986385Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.2028925Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.2030000Z ##[group]Fetching the repository
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.2039659Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4cd825dfd79c201c99c9e264c0a519eb76b40bc2:refs/remotes/origin/main
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7099038Z From https://github.com/arcnosixta/squeeze
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7102036Z  * [new ref]         4cd825dfd79c201c99c9e264c0a519eb76b40bc2 -> origin/main
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7107771Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7110132Z ##[group]Determining the checkout info
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7112953Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7114838Z [command]/usr/bin/git sparse-checkout disable
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7174712Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7209254Z ##[group]Checking out the ref
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7214157Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7296968Z Switched to a new branch 'main'
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7302990Z branch 'main' set up to track 'origin/main'.
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7310546Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7354243Z [command]/usr/bin/git log -1 --format=%H
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7381026Z 4cd825dfd79c201c99c9e264c0a519eb76b40bc2
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7767547Z ##[group]Run actions/setup-node@v4
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7768801Z with:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7769688Z   node-version: 24
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7770674Z   always-auth: false
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7771861Z   check-latest: false
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7781848Z   token: ***
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.7782770Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.9279429Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.9284746Z (node:2346) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.9287852Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:34.9290573Z ##[group]Environment details
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.4510962Z node: v24.21.0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.4511551Z npm: 11.19.0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.4512239Z yarn: 1.22.22
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.4513849Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.4757705Z ##[group]Run if [ -f package-lock.json ]; then npm ci; fi
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.4758306Z ^[[36;1mif [ -f package-lock.json ]; then npm ci; fi^[[0m
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.5058994Z shell: /usr/bin/bash -e {0}
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.5059393Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.5213472Z ##[group]Run node src/cli/main.ts doctor
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.5213886Z ^[[36;1mnode src/cli/main.ts doctor^[[0m
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.5278546Z shell: /usr/bin/bash -e {0}
+test (24)	UNKNOWN STEP	2026-10-06T09:00:35.5278911Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.7905302Z 
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.7914257Z   ok    node >= 22.18 (native TS)  v24.21.0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.7915548Z   ok    ref store writable         .squeeze/store.jsonl (default)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.7916652Z   warn  upstream configured        (default api.openai.com)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.7920350Z   ok    level set                  safe (default)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.7922003Z   warn  api key present            unset (ok for bench)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.7922795Z 
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.7923292Z 2 check(s) need attention
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.7923875Z 
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.8127841Z ##[group]Run node --test test/*.test.ts
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.8128206Z ^[[36;1mnode --test test/*.test.ts^[[0m
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.8193603Z shell: /usr/bin/bash -e {0}
+test (24)	UNKNOWN STEP	2026-10-06T09:00:37.8193878Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1309771Z ✔ ansi stripping removes colour codes and shrinks text (2.186102ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1363795Z ✔ classify separates blanks, log noise and content (0.793231ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1365475Z ✔ isLogNoise needs timestamp or severity, not a bare number (1.969338ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1366960Z ✔ safe level never loses content-bearing lines (0.687784ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1368343Z ✔ aggressive collapses identical-template lines reversibly (2.584847ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1375725Z ✔ aggressive never grows the payload (0.995659ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1376839Z ✔ every stored ref round-trips byte-exact (0.703394ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1378233Z ✔ clustered output restores the full original through its ref (0.579172ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1382139Z ✔ aggressive preserves document order when interleaving logs and content (1.026507ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1395035Z ✔ content lines keep their relative order after aggressive (0.676303ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1396395Z ✔ refs survive a store restart when persisted to disk (1.310978ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1398459Z ✔ identical text yields the same ref across independent stores (0.341588ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1399874Z ✔ store evicts oldest entries past its cap (1.008664ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1452469Z ✔ default Store writes nothing to disk (0.226924ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1604016Z ✔ anthropic tool_result blocks get compressed in place (5.874881ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1605696Z ✔ openai tool-role string content is compressed (1.868469ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1619630Z ✔ original request object is not mutated (0.661295ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1633719Z ✔ non-object payloads pass through safely (0.247101ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1635385Z ✔ extended thinking blocks are never rewritten (0.371283ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1654071Z ✔ compresses multi-turn transcripts across both formats at once (3.800915ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1655401Z ✔ none level leaves payload byte-identical (0.210824ms)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1659075Z ℹ tests 21
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1659775Z ℹ suites 0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1660169Z ℹ pass 21
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1660529Z ℹ fail 0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1660901Z ℹ cancelled 0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1661313Z ℹ skipped 0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1661892Z ℹ todo 0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1662382Z ℹ duration_ms 180.525781
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1731367Z ##[group]Run node src/cli/main.ts selftest
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1732232Z ^[[36;1mnode src/cli/main.ts selftest^[[0m
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1796444Z shell: /usr/bin/bash -e {0}
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.1796715Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.3169758Z self-test: 9779 -> 80 chars, 1 refs, 1 verified byte-exact, PASS
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.3279090Z ##[group]Run ./scripts/test-proxy.sh
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.3279441Z ^[[36;1m./scripts/test-proxy.sh^[[0m
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.3343496Z shell: /usr/bin/bash -e {0}
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.3343768Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.7388099Z 
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.7389149Z proxy integration (level=aggressive)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.7476377Z   ok    health reports ok
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.7492959Z   ok    health reports level
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.7553732Z   ok    unknown ref returns 404
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.8517094Z   ok    request forwarded upstream
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.8835613Z   ok    payload shrank in flight (6134 -> 316 bytes)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.8853152Z   ok    model preserved
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.8869688Z   ok    system prompt preserved
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.8886952Z   ok    user text preserved
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.8903105Z   ok    tool_use_id preserved
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.8925638Z   ok    forwarded text carries a ref
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.9017663Z   ok    expand restores all 120 original lines
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.9018954Z 
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.9019199Z all proxy checks passed
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.9078708Z ##[group]Run ./scripts/test-mcp.sh
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.9079035Z ^[[36;1m./scripts/test-mcp.sh^[[0m
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.9141948Z shell: /usr/bin/bash -e {0}
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.9142213Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.9270893Z 
+test (24)	UNKNOWN STEP	2026-10-06T09:00:38.9271465Z mcp server
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.0718729Z   ok    initialize returns protocol version
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.1544434Z   ok    tools/list advertises both tools
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.2347872Z   ok    squeeze_compress emitted a ref
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.3483144Z   ok    squeeze_fetch restores all 50 lines in a new process
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.4747219Z   ok    unknown ref returns isError
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.5643893Z   ok    unknown method returns -32601
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.6469446Z   ok    notifications produce no output
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.6469911Z 
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.6470410Z all mcp checks passed
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.6525651Z ##[group]Run ./scripts/test-persistence.sh
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.6526045Z ^[[36;1m./scripts/test-persistence.sh^[[0m
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.6599787Z shell: /usr/bin/bash -e {0}
+test (24)	UNKNOWN STEP	2026-10-06T09:00:39.6600215Z ##[endgroup]
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.0407173Z 
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.0408752Z ref durability across restart
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.0409347Z   ok    ref written to disk
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.3272834Z   ok    expand after restart restores all 80 lines
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.3334299Z   ok    unknown ref still 404 after restart
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.3334579Z 
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.3334756Z restart durability checks passed
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.3484884Z Post job cleanup.
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.4739857Z (node:2676) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.4741957Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.4953056Z Post job cleanup.
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.5870470Z [command]/usr/bin/git version
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.5914124Z git version 2.55.0
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.5954243Z Temporarily overriding HOME='/home/runner/work/_temp/21ed6830-b12d-4050-8d38-1b79dc175f8a' before making global git config changes
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.5955802Z Adding repository directory to the temporary git global config as a safe directory
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.5959675Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/squeeze/squeeze
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.6002986Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.6043142Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.6304811Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.6334420Z http.https://github.com/.extraheader
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.6346625Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.6383193Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.6642701Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.6684930Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.7086889Z Cleaning up orphan processes
+test (24)	UNKNOWN STEP	2026-10-06T09:00:40.7374078Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+test (22.18)	UNKNOWN STEP	﻿2026-10-06T09:00:33.0797314Z Current runner version: '2.337.0'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0818636Z ##[group]Runner Image Provisioner
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0819337Z Hosted Compute Agent
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0819869Z Version: 20260901.588
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0820465Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0821067Z Build Date: 2026-09-01T19:56:44Z
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0821642Z Worker ID: {351b735e-a386-426f-8192-d6096c81bf32}
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0822419Z Azure Region: westus3
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0822926Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0824156Z ##[group]Operating System
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0824713Z Ubuntu
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0825197Z 24.04.5
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0825638Z LTS
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0826101Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0826598Z ##[group]Runner Image
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0827101Z Image: ubuntu-24.04
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0827556Z Version: 20260927.320.1
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0828711Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0830319Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0831099Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0832368Z ##[group]GITHUB_TOKEN Permissions
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0833928Z Contents: read
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0834395Z Metadata: read
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0834945Z Packages: read
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0835401Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0837183Z Secret source: Actions
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0837946Z Cache mode: write
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.0838534Z Prepare workflow directory
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.1104448Z Prepare all required actions
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.1158867Z Getting action download info
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.4298147Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.5064311Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.6939145Z Complete job name: test (22.18)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7569707Z ##[group]Run actions/checkout@v4
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7570415Z with:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7570770Z   repository: arcnosixta/squeeze
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7574023Z   token: ***
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7574379Z   ssh-strict: true
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7574730Z   ssh-user: git
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7575086Z   persist-credentials: true
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7575475Z   clean: true
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7575830Z   sparse-checkout-cone-mode: true
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7576237Z   fetch-depth: 1
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7576597Z   fetch-tags: false
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7576947Z   show-progress: true
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7577297Z   lfs: false
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7577622Z   submodules: false
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7577976Z   set-safe-directory: true
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7578380Z   allow-unsafe-pr-checkout: false
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.7578944Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.8413030Z Syncing repository: arcnosixta/squeeze
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.8415244Z ##[group]Getting Git version info
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.8416278Z Working directory is '/home/runner/work/squeeze/squeeze'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.8417498Z [command]/usr/bin/git version
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.8498897Z git version 2.55.0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.8516961Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.8532370Z Temporarily overriding HOME='/home/runner/work/_temp/58a99965-05bf-45ba-b588-848c5945e54d' before making global git config changes
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.8534087Z Adding repository directory to the temporary git global config as a safe directory
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:33.8536032Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/squeeze/squeeze
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0340704Z Deleting the contents of '/home/runner/work/squeeze/squeeze'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0344957Z ##[group]Initializing the repository
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0349845Z [command]/usr/bin/git init /home/runner/work/squeeze/squeeze
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0462770Z hint: Using 'master' as the name for the initial branch. This default branch name
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0464132Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0465225Z hint: to use in all of your new repositories, which will suppress this warning,
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0466018Z hint: call:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0466553Z hint:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0467065Z hint: 	git config --global init.defaultBranch <name>
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0467585Z hint:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0468100Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0469077Z hint: 'development'. The just-created branch can be renamed via this command:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0470161Z hint:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0470694Z hint: 	git branch -m <name>
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0471155Z hint:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0472002Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0473110Z Initialized empty Git repository in /home/runner/work/squeeze/squeeze/.git/
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0475240Z [command]/usr/bin/git remote add origin https://github.com/arcnosixta/squeeze
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0525787Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0526631Z ##[group]Disabling automatic garbage collection
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0530578Z [command]/usr/bin/git config --local gc.auto 0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0566962Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0567724Z ##[group]Setting up auth
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0574301Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0610363Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0927505Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.0959496Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.1157933Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.1191510Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.1410955Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.1455777Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.1456525Z ##[group]Fetching the repository
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.1467176Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4cd825dfd79c201c99c9e264c0a519eb76b40bc2:refs/remotes/origin/main
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6842998Z From https://github.com/arcnosixta/squeeze
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6844174Z  * [new ref]         4cd825dfd79c201c99c9e264c0a519eb76b40bc2 -> origin/main
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6847741Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6849325Z ##[group]Determining the checkout info
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6850596Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6853655Z [command]/usr/bin/git sparse-checkout disable
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6902274Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6931603Z ##[group]Checking out the ref
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6935095Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.6999541Z Switched to a new branch 'main'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7004309Z branch 'main' set up to track 'origin/main'.
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7009782Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7046129Z [command]/usr/bin/git log -1 --format=%H
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7069597Z 4cd825dfd79c201c99c9e264c0a519eb76b40bc2
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7392703Z ##[group]Run actions/setup-node@v4
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7393669Z with:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7394388Z   node-version: 22.18
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7395161Z   always-auth: false
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7395929Z   check-latest: false
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7403412Z   token: ***
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.7404111Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.8567743Z Attempting to download 22.18...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.8654255Z (node:2067) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:34.8656951Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:35.8698366Z Acquiring 22.18.0 - x64 from https://github.com/actions/node-versions/releases/download/22.18.0-16666198358/node-22.18.0-linux-x64.tar.gz
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:36.3937586Z Extracting ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:36.4031326Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/46f44e0c-3409-49ec-b41f-02fd998661ae -f /home/runner/work/_temp/0cff2542-7399-4ba9-a5eb-d76ea92ce79f
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:37.3991593Z Adding to the cache ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.0934816Z ##[group]Environment details
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.3878493Z node: v22.18.0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.3878948Z npm: 10.9.3
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.3879152Z yarn: 1.22.22
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.3879707Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.4035996Z ##[group]Run if [ -f package-lock.json ]; then npm ci; fi
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.4036422Z ^[[36;1mif [ -f package-lock.json ]; then npm ci; fi^[[0m
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.4912717Z shell: /usr/bin/bash -e {0}
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.4913015Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.5051059Z ##[group]Run node src/cli/main.ts doctor
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.5051346Z ^[[36;1mnode src/cli/main.ts doctor^[[0m
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.5109534Z shell: /usr/bin/bash -e {0}
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.5109768Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6219507Z 
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6230045Z   ok    node >= 22.18 (native TS)  v22.18.0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6230911Z   ok    ref store writable         .squeeze/store.jsonl (default)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6231573Z   warn  upstream configured        (default api.openai.com)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6232302Z   ok    level set                  safe (default)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6232855Z   warn  api key present            unset (ok for bench)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6233208Z 
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6233605Z 2 check(s) need attention
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6233870Z 
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6326036Z ##[group]Run node --test test/*.test.ts
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6326507Z ^[[36;1mnode --test test/*.test.ts^[[0m
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6392474Z shell: /usr/bin/bash -e {0}
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6392775Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.6793699Z TAP version 13
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.7952881Z # Subtest: ansi stripping removes colour codes and shrinks text
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8027921Z ok 1 - ansi stripping removes colour codes and shrinks text
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8038736Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8053100Z   duration_ms: 1.371102
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8053633Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8054414Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8055000Z # Subtest: classify separates blanks, log noise and content
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8055831Z ok 2 - classify separates blanks, log noise and content
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8056552Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8056959Z   duration_ms: 0.552183
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8057376Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8057891Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8058864Z # Subtest: isLogNoise needs timestamp or severity, not a bare number
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8060009Z ok 3 - isLogNoise needs timestamp or severity, not a bare number
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8060634Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8061092Z   duration_ms: 0.16134
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8061857Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8062276Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8062928Z # Subtest: safe level never loses content-bearing lines
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8063923Z ok 4 - safe level never loses content-bearing lines
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8064470Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8065169Z   duration_ms: 0.978107
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8065621Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8066077Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8066907Z # Subtest: aggressive collapses identical-template lines reversibly
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8067977Z ok 5 - aggressive collapses identical-template lines reversibly
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8068618Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8069164Z   duration_ms: 3.044455
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8069788Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8070260Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8070824Z # Subtest: aggressive never grows the payload
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8072490Z ok 6 - aggressive never grows the payload
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8073027Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8073432Z   duration_ms: 0.572403
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8073936Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8074347Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8074894Z # Subtest: every stored ref round-trips byte-exact
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8075583Z ok 7 - every stored ref round-trips byte-exact
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8076122Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8076541Z   duration_ms: 0.472895
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8076991Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8077390Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8078037Z # Subtest: clustered output restores the full original through its ref
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8078904Z ok 8 - clustered output restores the full original through its ref
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8079513Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8079924Z   duration_ms: 0.445343
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8080340Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8080641Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8081131Z # Subtest: aggressive preserves document order when interleaving logs and content
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8081923Z ok 9 - aggressive preserves document order when interleaving logs and content
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8082693Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8082947Z   duration_ms: 0.420987
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8083224Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8083450Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8083901Z # Subtest: content lines keep their relative order after aggressive
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8084533Z ok 10 - content lines keep their relative order after aggressive
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8084910Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8085123Z   duration_ms: 0.434246
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8085413Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8085657Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8086098Z # Subtest: refs survive a store restart when persisted to disk
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8086705Z ok 11 - refs survive a store restart when persisted to disk
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8087112Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8087358Z   duration_ms: 2.093368
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8087663Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8088229Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8088720Z # Subtest: identical text yields the same ref across independent stores
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8089440Z ok 12 - identical text yields the same ref across independent stores
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8089895Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8090154Z   duration_ms: 0.203363
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8090435Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8090682Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8091051Z # Subtest: store evicts oldest entries past its cap
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8091562Z ok 13 - store evicts oldest entries past its cap
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8092119Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8092376Z   duration_ms: 0.151235
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8092653Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8092894Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8093252Z # Subtest: default Store writes nothing to disk
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8093734Z ok 14 - default Store writes nothing to disk
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8094085Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8094328Z   duration_ms: 0.139378
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8094608Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8094856Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8302934Z # Subtest: anthropic tool_result blocks get compressed in place
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8304050Z ok 15 - anthropic tool_result blocks get compressed in place
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8312822Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8313125Z   duration_ms: 4.060439
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8313427Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8313608Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8313886Z # Subtest: openai tool-role string content is compressed
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8314251Z ok 16 - openai tool-role string content is compressed
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8314501Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8314678Z   duration_ms: 3.422288
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8314869Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8315034Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8315269Z # Subtest: original request object is not mutated
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8315576Z ok 17 - original request object is not mutated
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8315809Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8315971Z   duration_ms: 1.634625
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8316163Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8316317Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8316579Z # Subtest: non-object payloads pass through safely
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8317455Z ok 18 - non-object payloads pass through safely
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8317805Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8317979Z   duration_ms: 0.185546
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8318178Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8318337Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8318581Z # Subtest: extended thinking blocks are never rewritten
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8318915Z ok 19 - extended thinking blocks are never rewritten
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8319149Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8319303Z   duration_ms: 0.347037
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8319482Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8319641Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8319940Z # Subtest: compresses multi-turn transcripts across both formats at once
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8320489Z ok 20 - compresses multi-turn transcripts across both formats at once
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8320958Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8321113Z   duration_ms: 1.145337
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8321296Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8321454Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8321699Z # Subtest: none level leaves payload byte-identical
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8322213Z ok 21 - none level leaves payload byte-identical
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8322443Z   ---
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8322603Z   duration_ms: 0.260899
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8322784Z   type: 'test'
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8322950Z   ...
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8323102Z 1..21
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8323259Z # tests 21
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8323419Z # suites 0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8323575Z # pass 21
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8323729Z # fail 0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8323888Z # cancelled 0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8324066Z # skipped 0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8324224Z # todo 0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8324401Z # duration_ms 162.565314
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8381393Z ##[group]Run node src/cli/main.ts selftest
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8381675Z ^[[36;1mnode src/cli/main.ts selftest^[[0m
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8440801Z shell: /usr/bin/bash -e {0}
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.8441023Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.9559968Z self-test: 9779 -> 80 chars, 1 refs, 1 verified byte-exact, PASS
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.9646117Z ##[group]Run ./scripts/test-proxy.sh
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.9646432Z ^[[36;1m./scripts/test-proxy.sh^[[0m
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.9710764Z shell: /usr/bin/bash -e {0}
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:40.9711006Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.2879574Z 
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.2880435Z proxy integration (level=aggressive)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.2964170Z   ok    health reports ok
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.2980317Z   ok    health reports level
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.3033178Z   ok    unknown ref returns 404
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.3766750Z   ok    request forwarded upstream
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.3968049Z   ok    payload shrank in flight (6134 -> 316 bytes)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.3982046Z   ok    model preserved
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.3995533Z   ok    system prompt preserved
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4009912Z   ok    user text preserved
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4023523Z   ok    tool_use_id preserved
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4042015Z   ok    forwarded text carries a ref
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4118145Z   ok    expand restores all 120 original lines
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4118508Z 
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4118682Z all proxy checks passed
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4159319Z ##[group]Run ./scripts/test-mcp.sh
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4159583Z ^[[36;1m./scripts/test-mcp.sh^[[0m
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4218536Z shell: /usr/bin/bash -e {0}
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4218759Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4328075Z 
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.4328386Z mcp server
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.5683319Z   ok    initialize returns protocol version
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.6298246Z   ok    tools/list advertises both tools
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.6977072Z   ok    squeeze_compress emitted a ref
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.8415116Z   ok    squeeze_fetch restores all 50 lines in a new process
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:41.9786330Z   ok    unknown ref returns isError
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.0713465Z   ok    unknown method returns -32601
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.1704090Z   ok    notifications produce no output
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.1704380Z 
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.1704545Z all mcp checks passed
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.1747361Z ##[group]Run ./scripts/test-persistence.sh
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.1747654Z ^[[36;1m./scripts/test-persistence.sh^[[0m
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.1804535Z shell: /usr/bin/bash -e {0}
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.1804759Z ##[endgroup]
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.5408268Z 
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.5408872Z ref durability across restart
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.5409179Z   ok    ref written to disk
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.8186639Z   ok    expand after restart restores all 80 lines
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.8246690Z   ok    unknown ref still 404 after restart
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.8247180Z 
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.8248502Z restart durability checks passed
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.8647199Z Post job cleanup.
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.9631457Z (node:2397) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.9632180Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:42.9902747Z Post job cleanup.
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.0601242Z [command]/usr/bin/git version
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.0637195Z git version 2.55.0
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.0668650Z Temporarily overriding HOME='/home/runner/work/_temp/1c0facec-2f73-481d-a287-a0930f292508' before making global git config changes
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.0669488Z Adding repository directory to the temporary git global config as a safe directory
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.0673501Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/squeeze/squeeze
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.0802659Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.0835181Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.1045993Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.1259062Z http.https://github.com/.extraheader
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.1271363Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.1718449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.1929706Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.1964289Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.2302939Z Cleaning up orphan processes
+test (22.18)	UNKNOWN STEP	2026-10-06T09:00:43.2547642Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+test (current)	UNKNOWN STEP	﻿2026-10-06T09:00:32.5654002Z Current runner version: '2.337.0'
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5670682Z ##[group]Runner Image Provisioner
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5671261Z Hosted Compute Agent
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5671587Z Version: 20260901.588
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5672131Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5672560Z Build Date: 2026-09-01T19:56:44Z
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5673001Z Worker ID: {6de11dc1-fd3f-4433-b1a6-3c7fab758c73}
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5673412Z Azure Region: centralus
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5673747Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5674586Z ##[group]Operating System
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5674932Z Ubuntu
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5675321Z 24.04.5
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5675623Z LTS
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5675925Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5676274Z ##[group]Runner Image
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5676614Z Image: ubuntu-24.04
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5676958Z Version: 20260927.320.1
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5677723Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5678905Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5679436Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5680172Z ##[group]GITHUB_TOKEN Permissions
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5681312Z Contents: read
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5681633Z Metadata: read
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5682215Z Packages: read
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5682586Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5683941Z Secret source: Actions
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5684443Z Cache mode: write
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5684850Z Prepare workflow directory
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5887175Z Prepare all required actions
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.5925866Z Getting action download info
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.8312712Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:32.9305012Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.0942157Z Complete job name: test (current)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1411381Z ##[group]Run actions/checkout@v4
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1411819Z with:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1412319Z   repository: arcnosixta/squeeze
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1414308Z   token: ***
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1414537Z   ssh-strict: true
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1414773Z   ssh-user: git
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1415015Z   persist-credentials: true
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1415281Z   clean: true
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1415524Z   sparse-checkout-cone-mode: true
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1415803Z   fetch-depth: 1
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1416034Z   fetch-tags: false
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1416274Z   show-progress: true
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1416517Z   lfs: false
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1416743Z   submodules: false
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1416986Z   set-safe-directory: true
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1417258Z   allow-unsafe-pr-checkout: false
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.1417644Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2089316Z Syncing repository: arcnosixta/squeeze
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2090403Z ##[group]Getting Git version info
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2090894Z Working directory is '/home/runner/work/squeeze/squeeze'
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2091643Z [command]/usr/bin/git version
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2163219Z git version 2.55.0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2177967Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2189468Z Temporarily overriding HOME='/home/runner/work/_temp/8b8de1db-7f7a-46a5-bc99-ea26716b69c4' before making global git config changes
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2190322Z Adding repository directory to the temporary git global config as a safe directory
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2194647Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/squeeze/squeeze
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2243392Z Deleting the contents of '/home/runner/work/squeeze/squeeze'
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2250156Z ##[group]Initializing the repository
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2257287Z [command]/usr/bin/git init /home/runner/work/squeeze/squeeze
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2356616Z hint: Using 'master' as the name for the initial branch. This default branch name
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2357702Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2358908Z hint: to use in all of your new repositories, which will suppress this warning,
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2360103Z hint: call:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2360556Z hint:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2360983Z hint: 	git config --global init.defaultBranch <name>
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2361547Z hint:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2362206Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2363046Z hint: 'development'. The just-created branch can be renamed via this command:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2363663Z hint:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2364003Z hint: 	git branch -m <name>
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2364391Z hint:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2364907Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2365740Z Initialized empty Git repository in /home/runner/work/squeeze/squeeze/.git/
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2369843Z [command]/usr/bin/git remote add origin https://github.com/arcnosixta/squeeze
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2418022Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2418749Z ##[group]Disabling automatic garbage collection
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2421142Z [command]/usr/bin/git config --local gc.auto 0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2452837Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2453346Z ##[group]Setting up auth
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2459102Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2488005Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2792613Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2821206Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.2996696Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.3023751Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.3195504Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.3228471Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.3229121Z ##[group]Fetching the repository
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.3234961Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4cd825dfd79c201c99c9e264c0a519eb76b40bc2:refs/remotes/origin/main
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.8728317Z From https://github.com/arcnosixta/squeeze
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.8729235Z  * [new ref]         4cd825dfd79c201c99c9e264c0a519eb76b40bc2 -> origin/main
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.8731642Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.8732423Z ##[group]Determining the checkout info
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.8733689Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.8738091Z [command]/usr/bin/git sparse-checkout disable
+test (current)	UNKNOWN STEP	2026-10-06T09:00:33.9819241Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0007261Z ##[group]Checking out the ref
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0016504Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0310196Z Switched to a new branch 'main'
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0315462Z branch 'main' set up to track 'origin/main'.
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0320485Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0355290Z [command]/usr/bin/git log -1 --format=%H
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0377626Z 4cd825dfd79c201c99c9e264c0a519eb76b40bc2
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0615952Z ##[group]Run actions/setup-node@v4
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0616386Z with:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0616666Z   node-version: current
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0617012Z   always-auth: false
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0617339Z   check-latest: false
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0622350Z   token: ***
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.0622624Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.1579293Z (node:2079) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.1581183Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.2293875Z getting latest node version...
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.2294460Z getting latest node version...
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.2302338Z Attempting to download v26.10.0...
+test (current)	UNKNOWN STEP	2026-10-06T09:00:34.8504210Z Acquiring 26.10.0 - x64 from https://github.com/actions/node-versions/releases/download/26.10.0-35737674515/node-26.10.0-linux-x64.tar.gz
+test (current)	UNKNOWN STEP	2026-10-06T09:00:35.3893588Z Extracting ...
+test (current)	UNKNOWN STEP	2026-10-06T09:00:35.4039698Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/7e48a408-1979-4ecd-8ed1-edc79b134f42 -f /home/runner/work/_temp/5d64dff5-8111-4e9f-ab95-8b95039aeaf2
+test (current)	UNKNOWN STEP	2026-10-06T09:00:36.4608375Z Adding to the cache ...
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.3406811Z ##[group]Environment details
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.4836662Z node: v26.10.0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.4836984Z npm: 11.19.1
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.4837201Z yarn: 1.22.22
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.4837853Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.4983330Z ##[group]Run if [ -f package-lock.json ]; then npm ci; fi
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.4983633Z ^[[36;1mif [ -f package-lock.json ]; then npm ci; fi^[[0m
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.5265954Z shell: /usr/bin/bash -e {0}
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.5266161Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.5383380Z ##[group]Run node src/cli/main.ts doctor
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.5383593Z ^[[36;1mnode src/cli/main.ts doctor^[[0m
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.5434407Z shell: /usr/bin/bash -e {0}
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.5434570Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6302609Z 
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6318592Z   ok    node >= 22.18 (native TS)  v26.10.0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6320252Z   ok    ref store writable         .squeeze/store.jsonl (default)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6320759Z   warn  upstream configured        (default api.openai.com)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6321284Z   ok    level set                  safe (default)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6321801Z   warn  api key present            unset (ok for bench)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6322299Z 
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6322494Z 2 check(s) need attention
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6322589Z 
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6413042Z ##[group]Run node --test test/*.test.ts
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6413261Z ^[[36;1mnode --test test/*.test.ts^[[0m
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6468628Z shell: /usr/bin/bash -e {0}
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.6468793Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7616985Z ✔ ansi stripping removes colour codes and shrinks text (2.622563ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7624769Z ✔ classify separates blanks, log noise and content (0.49337ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7640201Z ✔ isLogNoise needs timestamp or severity, not a bare number (0.149244ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7642191Z ✔ safe level never loses content-bearing lines (0.303285ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7647463Z ✔ aggressive collapses identical-template lines reversibly (1.263235ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7648183Z ✔ aggressive never grows the payload (0.550055ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7648854Z ✔ every stored ref round-trips byte-exact (3.100966ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7649579Z ✔ clustered output restores the full original through its ref (2.561615ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7650490Z ✔ aggressive preserves document order when interleaving logs and content (0.315062ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7651214Z ✔ content lines keep their relative order after aggressive (0.256024ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7653040Z ✔ refs survive a store restart when persisted to disk (0.750385ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7655166Z ✔ identical text yields the same ref across independent stores (0.097276ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7655835Z ✔ store evicts oldest entries past its cap (0.121042ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7656378Z ✔ default Store writes nothing to disk (0.120721ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7744837Z ✔ anthropic tool_result blocks get compressed in place (3.757755ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7745497Z ✔ openai tool-role string content is compressed (1.040441ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7745835Z ✔ original request object is not mutated (0.36701ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7746122Z ✔ non-object payloads pass through safely (0.134722ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7746407Z ✔ extended thinking blocks are never rewritten (0.177345ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7747337Z ✔ compresses multi-turn transcripts across both formats at once (1.677125ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7747698Z ✔ none level leaves payload byte-identical (0.133641ms)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7801066Z ℹ tests 21
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7801615Z ℹ suites 0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7802193Z ℹ pass 21
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7802525Z ℹ fail 0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7802780Z ℹ cancelled 0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7803005Z ℹ skipped 0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7803200Z ℹ todo 0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7803521Z ℹ duration_ms 106.016241
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7871784Z ##[group]Run node src/cli/main.ts selftest
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7872461Z ^[[36;1mnode src/cli/main.ts selftest^[[0m
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7926665Z shell: /usr/bin/bash -e {0}
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.7926816Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.8815793Z self-test: 9779 -> 80 chars, 1 refs, 1 verified byte-exact, PASS
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.8915560Z ##[group]Run ./scripts/test-proxy.sh
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.8915770Z ^[[36;1m./scripts/test-proxy.sh^[[0m
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.8971890Z shell: /usr/bin/bash -e {0}
+test (current)	UNKNOWN STEP	2026-10-06T09:00:49.8972189Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.1791215Z 
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.1792283Z proxy integration (level=aggressive)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.1853858Z   ok    health reports ok
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.1868262Z   ok    health reports level
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.1914887Z   ok    unknown ref returns 404
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2403812Z   ok    request forwarded upstream
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2623522Z   ok    payload shrank in flight (6134 -> 316 bytes)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2638169Z   ok    model preserved
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2651145Z   ok    system prompt preserved
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2663833Z   ok    user text preserved
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2676157Z   ok    tool_use_id preserved
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2692760Z   ok    forwarded text carries a ref
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2764085Z   ok    expand restores all 120 original lines
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2764383Z 
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2764558Z all proxy checks passed
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2817371Z ##[group]Run ./scripts/test-mcp.sh
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2817576Z ^[[36;1m./scripts/test-mcp.sh^[[0m
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2877248Z shell: /usr/bin/bash -e {0}
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2877398Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2985415Z 
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.2985697Z mcp server
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.4019635Z   ok    initialize returns protocol version
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.4489762Z   ok    tools/list advertises both tools
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.4937936Z   ok    squeeze_compress emitted a ref
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.5729861Z   ok    squeeze_fetch restores all 50 lines in a new process
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.6371767Z   ok    unknown ref returns isError
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.7076660Z   ok    unknown method returns -32601
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.7616686Z   ok    notifications produce no output
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.7617195Z 
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.7617651Z all mcp checks passed
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.7656266Z ##[group]Run ./scripts/test-persistence.sh
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.7656468Z ^[[36;1m./scripts/test-persistence.sh^[[0m
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.7725868Z shell: /usr/bin/bash -e {0}
+test (current)	UNKNOWN STEP	2026-10-06T09:00:50.7726081Z ##[endgroup]
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.1139858Z 
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.1140457Z ref durability across restart
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.1140785Z   ok    ref written to disk
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.3900387Z   ok    expand after restart restores all 80 lines
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.3944257Z   ok    unknown ref still 404 after restart
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.3944461Z 
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.3944654Z restart durability checks passed
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.4061049Z Post job cleanup.
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.4827361Z (node:2414) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.4827862Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.4979046Z Post job cleanup.
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5535318Z [command]/usr/bin/git version
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5566288Z git version 2.55.0
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5589185Z Temporarily overriding HOME='/home/runner/work/_temp/017772ee-2703-438c-ba65-ab4ec71749e7' before making global git config changes
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5590313Z Adding repository directory to the temporary git global config as a safe directory
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5592424Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/squeeze/squeeze
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5623296Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5659466Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5855257Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5881058Z http.https://github.com/.extraheader
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5889962Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.5936997Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.6178298Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.6214005Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.6516494Z Cleaning up orphan processes
+test (current)	UNKNOWN STEP	2026-10-06T09:00:51.6716109Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

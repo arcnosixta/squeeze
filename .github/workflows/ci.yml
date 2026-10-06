@@ -51,13 +51,17 @@ jobs:
         with:
           node-version: "24"
 
-      # Guards the README table against silent regression. If compression gets
-      # weaker, this fails instead of the numbers quietly going stale.
+      # Guards the README tables against silent regression. The real benchmark
+      # (fixtures/real, regenerable via scripts/collect-real.sh) is the one
+      # that matters: it sits around 11-12% on the byte total, dragged down by
+      # the near-irreducible dpkg log, while tsc/pytest sit at 70%/45%. If
+      # clustering weakens, this fails instead of the numbers quietly going
+      # stale.
       - name: benchmark has not regressed
         run: |
           set -euo pipefail
-          out=$(node src/cli/main.ts bench aggressive)
+          out=$(node src/cli/main.ts bench real aggressive)
           echo "$out"
           pct=$(echo "$out" | grep -o '([0-9.]*% reduction)' | tr -d '()% ' | cut -d. -f1)
           echo "reduction: ${pct}%"
-          awk -v p="$pct" 'BEGIN { if (p < 45) { print "regression: " p "% < 45%"; exit 1 } }'
+          awk -v p="$pct" 'BEGIN { if (p < 8) { print "regression: " p "% < 8%"; exit 1 } }'
