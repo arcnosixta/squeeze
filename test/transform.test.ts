@@ -137,3 +137,91 @@ test("none level leaves payload byte-identical", () => {
   const r = transformRequest(payload, "none", store);
   assert.equal(r.payload.messages[0].content, "x".repeat(500));
 });
+
+test("Responses API function_call_output gets compressed in place", () => {
+  const store = new Store();
+  const noisy = Array.from(
+    { length: 60 },
+    (_, i) => `src/mod${i}.ts(${i},4): error TS2322: type mismatch`,
+  ).join("\n");
+
+  const payload = {
+    model: "gpt-5",
+    input: [
+      { role: "user", content: "run tsc" },
+      { type: "function_call", call_id: "c1", name: "shell", arguments: "{}" },
+      { type: "function_call_output", call_id: "c1", output: noisy },
+    ],
+  };
+
+  const r = transformRequest(payload, "aggressive", store);
+
+  assert.ok(savedChars(r.stats) > 0, "should save tokens");
+  assert.equal(r.payload.input[0].content, "run tsc", "user turn untouched");
+  assert.equal(r.payload.input[1].name, "shell", "function_call untouched");
+  assert.equal(r.payload.input[2].call_id, "c1", "call_id preserved");
+  assert.ok(
+    r.payload.input[2].output.length < noisy.length / 10,
+    "function_call_output compressed",
+  );
+  assert.ok(store.size >= 1, "original retained in store");
+});
+
+test("Responses API message content blocks are compressed", () => {
+  const store = new Store();
+  const noisy = Array.from({ length: 120 }, (_, i) => `2026-10-04T09:00:00Z INFO worker tick ${i}`).join("\n");
+
+  const payload = {
+    model: "gpt-5",
+    input: [
+      {
+        role: "user",
+        content: [
+          { type: "input_text", text: "check the logs" },
+          { type: "input_text", text: noisy },
+        ],
+      },
+    ],
+  };
+
+  const r = transformRequest(payload, "aggressive", store);
+  assert.ok(savedChars(r.stats) > 0);
+  assert.equal(r.payload.input[0].content[0].text, "check the logs", "short text untouched");
+  assert.ok(r.payload.input[0].content[1].text.length < noisy.length / 5, "noisy block compressed");
+});
+
+test("Responses API reasoning is never rewritten", () => {
+  const store = new Store();
+  const reasoningText = Array.from({ length: 60 }, (_, i) => `reasoning step ${i}`).join("\n");
+  const summaryText = Array.from({ length: 60 }, (_, i) => `summary point ${i}`).join("\n");
+
+  const payload = {
+    model: "gpt-5",
+    input: [
+      {
+        type: "reasoning",
+        id: "rs_1",
+        summary: [{ type: "summary_text", text: summaryText }],
+        content: [{ type: "reasoning_text", text: reasoningText }],
+      },
+    ],
+  };
+
+  const r = transformRequest(payload, "aggressive", store);
+  assert.equal(r.payload.input[0].content[0].text, reasoningText, "reasoning_text preserved");
+  assert.equal(r.payload.input[0].summary[0].text, summaryText, "summary_text preserved");
+  assert.equal(savedChars(r.stats), 0, "nothing compressed");
+});
+
+test("Responses API string input is compressed without touching other fields", () => {
+  const store = new Store();
+  const noisy = Array.from({ length: 80 }, (_, i) => `src/f${i}.ts(${i},2): error TS2322`).join("\n");
+  const payload = { model: "gpt-5", stream: true, input: noisy };
+
+  const r = transformRequest(payload, "aggressive", store);
+  assert.ok(savedChars(r.stats) > 0);
+  assert.ok(r.payload.input.length < noisy.length / 10, "input string compressed");
+  assert.equal(r.payload.stream, true, "unrelated fields untouched");
+  assert.equal(r.payload.model, "gpt-5");
+});
+

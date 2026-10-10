@@ -32,18 +32,29 @@ export function merge(a: Stats, b: Stats): Stats {
   };
 }
 
-// A block is compressible when it carries agent-visible text. Extended
-// thinking is excluded: rewriting it changes reasoning semantics.
+// Reasoning is never rewritten, in either provider's spelling: Anthropic nests
+// `thinking`/`redacted_thinking`, the Responses API nests `reasoning_text`
+// (content) and `summary_text` (summary). Changing these alters what the model
+// reasoned, not just how the transcript is formatted.
+const REASONING_TYPES = new Set([
+  "thinking",
+  "redacted_thinking",
+  "reasoning_text",
+  "summary_text",
+]);
+
+// A block is compressible when it carries agent-visible text.
 function isTextBlock(b: unknown): b is Block & { text: string } {
   if (typeof b !== "object" || b === null) return false;
   const o = b as Block;
-  if (o.type === "thinking" || o.type === "redacted_thinking") return false;
+  if (typeof o.type === "string" && REASONING_TYPES.has(o.type)) return false;
   return typeof o.text === "string";
 }
 
 // Walk any nested content shape and compress every text block found.
-// Anthropic nests tool_result text at content[].content[].text, OpenAI keeps
-// tool output as a flat string, and both appear inside the same transcript
+// Anthropic nests tool_result text at content[].content[].text, OpenAI chat
+// keeps tool output as a flat string, the Responses API puts it at
+// function_call_output.output, and all three appear inside the same transcript
 // shape across turns, so this has to recurse rather than assume one level.
 interface WalkNode {
   value: unknown;
@@ -82,6 +93,14 @@ function walk(node: unknown, level: Level, store: Store, acc: Stats): WalkNode {
         stats: merge(acc, r.stats),
       };
     }
+    // Responses API tool output: { type: "function_call_output", output: "…" }.
+    if (typeof o.output === "string") {
+      const r = compress(o.output, { level, store });
+      return {
+        value: r.text === o.output ? o : { ...o, output: r.text },
+        stats: merge(acc, r.stats),
+      };
+    }
   }
 
   return { value: node, stats: acc };
@@ -107,6 +126,34 @@ export function transformRequest<T>(
   }
 
   const record = body as Record<string, unknown>;
+
+  // OpenAI Responses API: `input` is either an array of input items (messages,
+  // function_call_output, reasoning, …) or a single string turn. Same policy as
+  // `messages`: walk the items, never the structural fields.
+  if (Array.isArray(record.input)) {
+    let acc = emptyStats();
+    const outItems = record.input.map((item) => {
+      const r = walk(item, level, store, acc);
+      acc = r.stats;
+      return r.value;
+    });
+    return {
+      payload: { ...record, input: outItems } as unknown as T,
+      stats: acc,
+      store,
+    };
+  }
+
+  if (typeof record.input === "string") {
+    const r = compress(record.input, { level, store });
+    if (r.text === record.input) return { payload, stats: emptyStats(), store };
+    return {
+      payload: { ...record, input: r.text } as unknown as T,
+      stats: r.stats,
+      store,
+    };
+  }
+
   const messages = record.messages;
   if (!Array.isArray(messages)) {
     return { payload, stats: emptyStats(), store };
