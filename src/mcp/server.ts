@@ -25,15 +25,28 @@ function level(): Level {
 
 const store = new Store({ path: defaultStorePath() });
 
+// Hints per MCP spec 2025-06-18. All four booleans are set explicitly because
+// some hosts (notably the OpenAI directory) reject tools that leave any unset.
+interface ToolAnnotations {
+  title?: string;
+  readOnlyHint?: boolean;
+  destructiveHint?: boolean;
+  idempotentHint?: boolean;
+  openWorldHint?: boolean;
+}
+
 interface ToolDef {
   name: string;
+  title: string;
   description: string;
   inputSchema: Record<string, unknown>;
+  annotations: ToolAnnotations;
 }
 
 const TOOLS: ToolDef[] = [
   {
     name: "squeeze_fetch",
+    title: "Fetch original text",
     description:
       "Expand a squeeze ref back to the original text it stands for. Use this " +
       "whenever a compressed span in your context looks like it holds the detail " +
@@ -49,9 +62,18 @@ const TOOLS: ToolDef[] = [
       },
       required: ["ref"],
     },
+    // Pure lookup: reads nothing but the store, changes nothing.
+    annotations: {
+      title: "Fetch original text",
+      readOnlyHint: true,
+      destructiveHint: false,
+      idempotentHint: true,
+      openWorldHint: false,
+    },
   },
   {
     name: "squeeze_compress",
+    title: "Compress text",
     description:
       "Compress noisy text before it enters your context: compiler errors, test " +
       "output, logs, repeated tool results. Output stays fully reversible; pass " +
@@ -67,6 +89,16 @@ const TOOLS: ToolDef[] = [
         },
       },
       required: ["text"],
+    },
+    // Writes collapsed spans into the content-addressed store, but only
+    // additively: same input hashes to the same ref, so it never overwrites or
+    // deletes anything and repeated calls are no-ops.
+    annotations: {
+      title: "Compress text",
+      readOnlyHint: false,
+      destructiveHint: false,
+      idempotentHint: true,
+      openWorldHint: false,
     },
   },
 ];
