@@ -5,12 +5,12 @@
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-none-2ea44f.svg)](#install)
 
-**Your context window is full of the same error repeated 200 times. squeeze cuts
-that noise — up to 70% on real compiler output, 45% on real failing test runs.
-Losslessly.**
+**Your context window is full of the same error repeated 200 times.** squeeze
+cuts that noise — up to 70% on real compiler output, 45% on real failing test
+runs — and never deletes a byte.
 
-A drop-in proxy that sits between your agent and the LLM API, compresses tool
-output before it hits the context window, and keeps every original byte
+A drop-in proxy that sits between your coding agent and the LLM API, compresses
+tool output before it reaches the context window, and keeps every original byte
 retrievable — by the model itself, over MCP. No code changes. No dependencies.
 One environment variable.
 
@@ -23,7 +23,41 @@ Measured on captured tool runs, not hand-written fixtures: `scripts/collect-real
 re-runs tsc, npm, pytest, node --test and this repository's own CI log, then the
 `bench real` command reports the honest numbers.
 
----
+<p align="center">
+  <img alt="squeeze: self-test, real benchmark and inspect output in a terminal"
+       src="docs/demo.png" width="680">
+</p>
+
+## Contents
+
+- [Features](#features)
+- [Why](#why)
+- [Install](#install)
+- [Use](#use)
+- [Benchmark](#benchmark)
+- [MCP](#mcp)
+- [Levels](#levels)
+- [How it works](#how-it-works)
+- [Limits](#limits)
+- [What it does not touch](#what-it-does-not-touch)
+- [CLI](#cli)
+- [Environment](#environment)
+- [Tests](#tests)
+- [Status](#status)
+- [Provenance](#provenance)
+- [License](#license)
+
+## Features
+
+- **Lossless by design** — squeeze never deletes. Every collapsed span is stored
+  in a content-addressed ref store, so `expand()` reconstructs any document
+  byte-for-byte.
+- **Reversible by the model** — the `squeeze_fetch` MCP tool lets the agent pull
+  the real text back on demand, instead of guessing what a ref meant.
+- **Drop-in** — point `*_BASE_URL` at the proxy. No code, no config file, and
+  zero runtime dependencies beyond Node itself.
+- **Honest** — it compresses noise, never meaning. Source code and JSON are
+  detected and left alone, and the benchmark reports `0.0%` for them on purpose.
 
 ## Why
 
@@ -53,8 +87,6 @@ restart. A ref printed into a transcript last week still resolves today.
 ```bash
 curl "http://127.0.0.1:8899/squeeze/expand?ref=83a63083475a87f0"
 ```
-
----
 
 ## Install
 
@@ -219,6 +251,53 @@ handle-based replacement — the `⟨ref=…⟩`, `⟨×N more, ref=…⟩` and
 `expand()` resolves every one back in place, so aggregate output reconstructs
 byte-for-byte (the tests assert exactly that).
 
+## How it works
+
+<p align="center">
+  <img alt="Architecture: coding agent <-> squeeze proxy <-> LLM API, with a ref store and squeeze_fetch over MCP"
+       src="docs/architecture.png" width="720">
+</p>
+
+squeeze intercepts the request before it leaves the machine. Tool output is
+compressed in place, the original spans go into a content-addressed store, and
+the model sees a small prompt with short refs instead of a wall of repetition.
+When it needs the real lines, it calls `squeeze_fetch` and gets them back.
+
+Five passes over each text block:
+
+1. **ANSI strip** — colour codes carry no meaning to a model.
+2. **Template clustering** — digit runs collapse to `#` regardless of
+   neighbouring word characters, so `suite1`, `module12` and `(3,14)` all match
+   their siblings. Timestamps normalize for free, so adjacent log lines group.
+3. **Block dedup** — runs of 8+ identical lines collapse to a range reference.
+4. **Document-wide dedup** — real output rarely repeats *adjacent* lines: an
+   error list names a different file and line number on every row. This pass
+   keys on the whole document, so `row9.ts(15,5)` and `row10.ts(16,5)` collapse
+   to the same handle even separated by other lines. Every line keeps its own
+   slot — the original is swapped for a handle in place, never hoisted. Source
+   code and JSON are detected and skipped, because there the repetition is the
+   meaning.
+5. **Blank-run collapse** — trailing newlines are preserved exactly, since tools
+   diff on them.
+
+Every collapse writes its original text into the store and emits a ref. Nothing
+clustering-related is unrecoverable: `expand(input, store)` replaces each handle
+with its stored span, in place.
+
+Clustering happens in place. Hoisting log lines out of the transcript to group
+them better would squeeze a few percent more, but it would silently reorder the
+document — the model would read a reshuffled version of the user's history whose
+original sequence no longer exists anywhere. That is not lossless, so the tests
+enforce order preservation:
+
+```
+test/aggressive preserves document order when interleaving logs and content
+```
+
+A ref only ever holds a contiguous slice of the real input, and
+`expand()` reconstructs the original document byte-for-byte. Both properties are
+asserted, not assumed.
+
 ## Limits
 
 `squeeze` compresses the *text payload* of tool results. It does not:
@@ -260,7 +339,7 @@ squeeze mcp                            run the MCP server on stdio
 `--level` accepts `none`, `safe`, `aggressive`, or the alias `--aggressive`.
 `SQUEEZE_LEVEL` sets the default when the flag is absent.
 
-## Env
+## Environment
 
 | variable | default | meaning |
 | --- | --- | --- |
@@ -273,43 +352,6 @@ squeeze mcp                            run the MCP server on stdio
 
 Endpoints: `/squeeze/health`, `/squeeze/expand?ref=…`
 
-## How it works
-
-Five passes over each text block:
-
-1. **ANSI strip** — colour codes carry no meaning to a model.
-2. **Template clustering** — digit runs collapse to `#` regardless of
-   neighbouring word characters, so `suite1`, `module12` and `(3,14)` all match
-   their siblings. Timestamps normalize for free, so adjacent log lines group.
-3. **Block dedup** — runs of 8+ identical lines collapse to a range reference.
-4. **Document-wide dedup** — real output rarely repeats *adjacent* lines: an
-   error list names a different file and line number on every row. This pass
-   keys on the whole document, so `row9.ts(15,5)` and `row10.ts(16,5)` collapse
-   to the same handle even separated by other lines. Every line keeps its own
-   slot — the original is swapped for a handle in place, never hoisted. Source
-   code and JSON are detected and skipped, because there the repetition is the
-   meaning.
-5. **Blank-run collapse** — trailing newlines are preserved exactly, since tools
-   diff on them.
-
-Every collapse writes its original text into the store and emits a ref. Nothing
-clustering-related is unrecoverable: `expand(input, store)` replaces each handle
-with its stored span, in place.
-
-Clustering happens in place. Hoisting log lines out of the transcript to group
-them better would squeeze a few percent more, but it would silently reorder the
-document — the model would read a reshuffled version of the user's history whose
-original sequence no longer exists anywhere. That is not lossless, so the tests
-enforce order preservation:
-
-```
-test/aggressive preserves document order when interleaving logs and content
-```
-
-A ref only ever holds a contiguous slice of the real input, and
-`expand()` reconstructs the original document byte-for-byte. Both properties are
-asserted, not assumed.
-
 ## Tests
 
 ```bash
@@ -319,8 +361,8 @@ npm run test:mcp              # MCP over a real stdio JSON-RPC session
 npm run test:persistence      # ref survives a full proxy restart
 ```
 
-The unit suite covers the new machinery directly: `looksStructured` protects
-JSON and source files, document-wide dedup collapses non-adjacent repeats while
+The unit suite covers the machinery directly: `looksStructured` protects JSON
+and source files, document-wide dedup collapses non-adjacent repeats while
 keeping every line's slot, and `expand()` reconstructs the original document
 byte-for-byte.
 
@@ -343,11 +385,13 @@ separate service rather than on the agent's own host.
 
 ## Provenance
 
-The real fixtures in `fixtures/real/` are committed so anyone can inspect exactly
-what the benchmark compressed. `scripts/collect-real.sh` regenerates them from
-the same tools that built the machine: tsc, npm, pytest, node --test, this
-repo's public CI log, and the system dpkg log. Where a tool is missing on your
-machine the script says so and keeps the checked-in copy.
+The real fixtures in `fixtures/real/` and the terminal screenshot in the README
+are both generated, never hand-typed. `scripts/collect-real.sh` regenerates the
+fixtures from the same tools that built the machine (tsc, npm, pytest,
+node --test, this repo's public CI log, and the system dpkg log), and
+`scripts/make-assets.py` re-renders the README images from live CLI output.
+Where a tool is missing on your machine the scripts say so and keep the
+checked-in copy.
 
 ## License
 
