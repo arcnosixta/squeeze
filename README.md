@@ -82,7 +82,7 @@ node src/cli/main.ts doctor
 ## Use
 
 **As a proxy** (works with Claude Code, Codex, Cursor, anything speaking the
-OpenAI or Anthropic API):
+Anthropic API or OpenAI's Chat Completions and Responses APIs):
 
 ```bash
 node src/cli/main.ts serve
@@ -223,7 +223,6 @@ byte-for-byte (the tests assert exactly that).
 
 `squeeze` compresses the *text payload* of tool results. It does not:
 
-- Compress OpenAI's Responses API shape (`input` instead of `messages`)
 - Touch images, audio, or binary tool results
 - Scope the store per project — refs from two projects share one store, which is
   fine for expansion (keys are content hashes) but means no per-project eviction
@@ -236,9 +235,11 @@ is mostly test runs, compiler errors, and build logs, it will.
 ## What it does not touch
 
 - Your system prompt, instructions, or `max_tokens`
-- Extended thinking blocks (`type: "thinking"`) — rewriting these changes
-  reasoning semantics, so they pass through byte-identical
-- `tool_use_id` and every structural field
+- Reasoning blocks in either spelling — Anthropic `type: "thinking"` /
+  `"redacted_thinking"`, Responses API `"reasoning_text"` / `"summary_text"` —
+  because rewriting them changes reasoning semantics, so they pass through
+  byte-identical
+- `tool_use_id`, `call_id` and every structural field
 - Your input object is cloned, never mutated
 
 ## CLI
@@ -312,7 +313,7 @@ asserted, not assumed.
 ## Tests
 
 ```bash
-npm test                      # 25 unit tests
+npm test                      # 31 unit tests
 npm run test:proxy            # end-to-end proxy, real HTTP, all 3 levels
 npm run test:mcp              # MCP over a real stdio JSON-RPC session
 npm run test:persistence      # ref survives a full proxy restart
@@ -334,11 +335,11 @@ that would silently corrupt a long-running agent session.
 ## Status
 
 Working and tested: proxy, CLI, MCP server, persistent store, document-wide
-dedup, byte-exact `expand()`.
+dedup, byte-exact `expand()`, and all three request shapes (Anthropic
+`messages`, OpenAI chat `messages`, OpenAI Responses `input`).
 
-Not yet: OpenAI Responses API shape (`input` instead of `messages`), per-project
-store scoping, and a proxy mode for deploying squeeze as a separate service
-rather than on the agent's own host.
+Not yet: per-project store scoping, and a proxy mode for deploying squeeze as a
+separate service rather than on the agent's own host.
 
 ## Provenance
 
