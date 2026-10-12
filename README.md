@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/logo.svg" width="120" alt="squeeze logo">
+</p>
+
 # squeeze
 
 [![ci](https://github.com/arcnosixta/squeeze/actions/workflows/ci.yml/badge.svg)](https://github.com/arcnosixta/squeeze/actions/workflows/ci.yml)
